@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanse Cheat Sheet</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <my-greeting name="World"></my-greeting>
+    <script type="text/javascript">
+    class MyGreeting extends HTMLElement {
+        constructor() {
+            super();
+
+            // Create a shadow root
+            this.attachShadow({ mode: 'open' });
+
+            // Create elements
+            const wrapper = document.createElement('span');
+            wrapper.textContent = `Hello, ${this.getAttribute('name')}!`;
+
+            // Create a link element to load external CSS
+            const linkElem = document.createElement('link');
+            linkElem.setAttribute('rel', 'stylesheet');
+            linkElem.setAttribute('href', 'style.css');
+
+            // Attach the created elements to the shadow DOM
+            this.shadowRoot.append(linkElem, wrapper);
+        }
+    }
+
+    // Define the new element
+    customElements.define('my-greeting', MyGreeting);
+
+    </script>
+</body>
+</html>
