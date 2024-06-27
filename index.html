@@ -4,36 +4,199 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Japanse Cheat Sheet</title>
-    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <my-greeting name="World"></my-greeting>
+    <div class="page">
+        <div class="page__content">
+            <h1 class="page__title">⛩️ Japanese Cheat Sheet</h1>
+            <blockquote class="legend">
+                <strong>Symbols</strong>
+                <div class="two__columns">
+                    <ul class="column">
+                        <div class="legend__symbol">🟢</div>
+                        <span>"Noun-able" form (a form that can be nominalized with こと or の)</span>
+                        <br>
+                        <div class="legend__symbol">⬇️</div>
+                        <span>Considered inappropriate when addressing superiors.</span>
+                        <br>
+                        <div class="legend__symbol">1️⃣</div>
+                        <span>ないです is interchangable with ありません (the later is slightly more formal)</span>
+                        <br>
+                        <div class="legend__symbol">2️⃣</div>
+                        <span>が also marks objects of わかる (understand), ほしいです (want), and すきです (like)</span>
+                    </ul>
+                    <ul class="column">
+                        <div class="legend__symbol">3️⃣</div>
+                        <span>Relative time words, like きょう (today), あした (tomorrow), きのう (yesterday), らいげつ (next month) do not take に.</span>
+                        <br>
+                        <div class="legend__symbol">4️⃣</div>
+                        <span>と (and か) groups list all theirs members, や only lists some.</span>
+                        <br>
+                        <div class="legend__symbol">5️⃣</div>
+                        <span>さしあげる can sound patronizing; わたす (to hand over) is safer.</span>
+                        <br>
+                        <div class="legend__symbol">6️⃣</div>
+                        <span>に marks the grammatical subjects of potential-form verbs.</span>
+                    </ul>
+                </div>
+            </blockquote>
+            <h2>Table of contents</h2>
+            <div class="two__columns">
+                <div class="column">
+                    <strong>Verbs</strong>
+                    <ul class="table__of__contents">
+                        <li>
+                            <a href="#polite-verbs">Polite Verbs</a>
+                        </li>
+                        <li>
+                            <a href="#informal-verbs">Informal Verbs</a>
+                        </li>
+                        <li>
+                            <a href="#verb-usages">Verb usages</a>
+                        </li>
+                    </ul>
+                    <strong>Syllabary</strong>
+                    <ul class="table__of__contents">
+                        <li>
+                            <a href="#hiragana">Hiragana あ</a>
+                        </li>
+                        <li>
+                            <a href="#verb-usages">Katakana ア</a>
+                        </li>
+                    </ul>
+                    <strong>Kanji</strong>
+                    <ul class="table__of__contents">
+                        <li>
+                            <a href="#jlpt-n5">JLPT N5</a>
+                        </li>
+                    </ul>
+                    <strong>Conjugations</strong>
+                    <ul class="table__of__contents">
+                        <li>
+                            <a href="#conjugating-verbs">Conjugating Verbs</a>
+                        </li>
+                        <li>
+                            <a href="#forms-of-to-be">Forms of である</a>
+                        </li>
+                        <li>
+                            <a href="#adjective-conjugation">Adjective Conjugation</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <strong>Particles</strong>
+                    <ul class="table__of__contents">
+                        <li>
+                            <a href="#particle-ha">Topic marker は (HA)</a>
+                        </li>
+                        <li>
+                            <a href="#particle-ga">Subject marker が (GA)</a>
+                        </li>
+                        <li>
+                            <a href="#particle-wo">Object marker を (WO)</a>
+                        </li>
+                        <li>
+                            <a href="#particle-ni">The "Aiming" particle に (NI)</a>
+                        </li>
+                        <li>
+                            <a href="#particle-to">The "Glue" particle と (TO)</a>
+                        </li>
+                        <li>
+                            <a href="#particle-de">The "Enabling" particle で (DE)</a>
+                        </li>
+                        <li>
+                            <a href="#particle-mo">Even/Also marker も (MO)</a>
+                        </li>
+                        <li>
+                            <a href="#particle-ka">Question Marker か (KA)</a>
+                        </li>
+                        <li>
+                            <a href="#particle-he">Destination Marker へ (HE)</a>
+                        </li>
+                        <li>
+                            <a href="#particle-no">Possession Marker の (NO)</a>
+                        </li>
+                        <li>
+                            <a href="#particle-ya">Incomplete "and" group や (YA)</a>
+                        </li>
+                    </ul>
+                    <strong>Comparison Particles</strong>
+                    <ul class="table__of__contents">
+                        <li>
+                            <a href="#particle-yori">より (YORI)</a>
+                        </li>
+                        <li>
+                            <a href="#particle-hodo">ほど (HODO)</a>
+                        </li>
+                        <li>
+                            <a href="#particle-dake">だけ (DAKE)</a>
+                        </li>
+                        <li>
+                            <a href="#particle-kurai">くらい (KURAI)</a>
+                        </li>
+                        <li>
+                            <a href="#particle-bakari">ばかり (BAKARI)</a>
+                        </li>
+                        <li>
+                            <a href="#particle-demo">でも (DEMO)</a>
+                        </li>
+                        <li>
+                            <a href="#particle-shika">しか (SHIKA)</a>
+                        </li>
+                    </ul>
+                    <strong>Other Particles</strong>
+                    <ul class="table__of__contents">
+                        <li>
+                            <a href="#particle-kara">From/Because から (KARA)</a>
+                        </li>
+                        <li>
+                            <a href="#particle-made">Until/To まで (MADE)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <h2 id="polite-verbs">Polite Verbs</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tense name</th>
+                        <th>Form</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Present/Future tense</td>
+                        <td><code>~i</code>＋ます</td>
+                    </tr>
+                    <tr>
+                        <td>Past tense<small>This is a note example</small></td>
+                        <td><code>~i</code>＋ました</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 id="informal-verbs">Informal Verbs</h2>
+            <h2 id="verb-usages">Verb usages</h2>
+        </div>
+    </div>
     <script type="text/javascript">
-    class MyGreeting extends HTMLElement {
-        constructor() {
-            super();
-
-            // Create a shadow root
-            this.attachShadow({ mode: 'open' });
-
-            // Create elements
-            const wrapper = document.createElement('span');
-            wrapper.textContent = `Hello, ${this.getAttribute('name')}!`;
-
-            // Create a link element to load external CSS
-            const linkElem = document.createElement('link');
-            linkElem.setAttribute('rel', 'stylesheet');
-            linkElem.setAttribute('href', 'style.css');
-
-            // Attach the created elements to the shadow DOM
-            this.shadowRoot.append(linkElem, wrapper);
-        }
-    }
-
-    // Define the new element
-    customElements.define('my-greeting', MyGreeting);
-
+        // 0-3 Hues from more to less saturated
+        // 4 Font color
+        // 5 Table title font color
+        const themePool = [
+            ['#7469B6','#AD88C6','#E1AFD1','#FFE6E6','#000','#FFF'], // Fucsia
+            ['#55AD9B','#95D2B3','#D8EFD3','#F1F8E8','#000','#000'], // Suave Green
+            ['#FFCCCC','#FEBBCC','#FFDDCC','#FFEECC','#000','#000'], // BubbleGum
+            ['#FF7D29','#FFBF78','#FFEEA9','#FEFFD2','#000','#FFF'], // 100%OrangeJuice
+            ['#FF9494','#FFD1D1','#FFE3E1','#FFF5E4','#000','#000'], // いちご
+        ];
+        const theme = themePool[Math.floor(Math.random() * themePool.length)]
+        document.documentElement.style.setProperty("--theme-color-1", theme[0]);
+        document.documentElement.style.setProperty("--theme-color-2", theme[1]);
+        document.documentElement.style.setProperty("--theme-color-3", theme[2]);
+        document.documentElement.style.setProperty("--theme-color-4", theme[3]);
+        document.documentElement.style.setProperty("--font-color", theme[4]);
+        document.documentElement.style.setProperty("--contrast-font-color", theme[5]);
     </script>
 </body>
 </html>
