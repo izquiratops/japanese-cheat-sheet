@@ -125,10 +125,21 @@ hr {
     background: repeating-linear-gradient( 45deg, var(--theme-color-4), var(--theme-color-4) 2px, var(--theme-color-3) 2px, var(--theme-color-3) 25px );
     background-color: var(--theme-color-2);
     border: 1px solid var(--theme-color-1);
+    border-radius: var(--border-radius);
+    /* Spacing */
     margin: 0px;
     margin-block-end: var(--spacing-2-extra-large);
     padding: var(--spacing-medium);
-    border-radius: var(--border-radius);
+    /* Misc */
+    overflow: hidden;
+}
+
+.legend__toggle__button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: var(--spacing-small);
+    cursor: pointer;
 }
 
 .legend__symbol {
@@ -143,6 +154,10 @@ hr {
 
 .column {
     padding-inline: var(--spacing-medium);
+}
+
+.folded {
+    max-height: 80px;
 }
 
 /* Contrast shadow */

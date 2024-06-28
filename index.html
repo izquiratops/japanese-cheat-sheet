@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japanse Cheat Sheet</title>
+    <title>⛩️ Japanse Cheat Sheet</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,8 +12,11 @@
     </a>
     <div class="page">
         <div class="page__content">
-            <h1 class="page__title">⛩️ Japanese Cheat Sheet</h1>
-            <blockquote class="legend">
+            <h1 class="page__title">Japanese Cheat Sheet</h1>
+            <blockquote class="legend folded" id="legend">
+                <div class="legend__toggle__button" onclick="toggleExpandLegend()">
+                    ➕
+                </div>
                 <strong>Symbols</strong>
                 <div class="two__columns">
                     <ul class="column">
@@ -362,6 +365,19 @@
         document.documentElement.style.setProperty("--theme-color-4", theme[3]);
         document.documentElement.style.setProperty("--font-color", theme[4]);
         document.documentElement.style.setProperty("--contrast-font-color", theme[5]);
+
+        function toggleExpandLegend() {
+            const legendElement = document.getElementById('legend');
+            const toggleButtonElement = legendElement.querySelector('.legend__toggle__button');
+
+            if (legendElement.classList.contains('folded')) {
+                legendElement.classList.remove('folded');
+                toggleButtonElement.textContent = "➖"
+            } else {
+                legendElement.classList.add('folded');
+                toggleButtonElement.textContent = "➕"
+            }
+        }
     </script>
 </body>
 </html>
