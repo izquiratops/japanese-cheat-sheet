@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="https://github.com/izquiratops/japanese-cheat-sheet">
+        <img src="./github-mark.svg" class="github__logo">
+    </a>
     <div class="page">
         <div class="page__content">
             <h1 class="page__title">⛩️ Japanese Cheat Sheet</h1>
@@ -41,7 +44,7 @@
                     </ul>
                 </div>
             </blockquote>
-            <h2>Table of contents</h2>
+            <h2 id="table-of-contents">Table of contents</h2>
             <div class="two__columns">
                 <div class="column">
                     <strong>Verbs</strong>
@@ -54,6 +57,9 @@
                         </li>
                         <li>
                             <a href="#verb-usages">Verb usages</a>
+                        </li>
+                        <li>
+                            <a href="#conjugating-verbs">Conjugating verbs</a>
                         </li>
                     </ul>
                     <strong>Syllabary</strong>
@@ -156,6 +162,7 @@
                     </ul>
                 </div>
             </div>
+
             <h2 id="polite-verbs">Polite Verbs</h2>
             <table>
                 <thead>
@@ -243,20 +250,110 @@
                     </tr>
                 </tbody>
             </table>
+
             <h2 id="informal-verbs">Informal Verbs</h2>
-            <h2 id="verb-usages">Verb usages</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tense name</th>
+                        <th>Form</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Present/Future</td>
+                        <td><code>～う</code></td>
+                    </tr>
+                    <tr>
+                        <td>Past</td>
+                        <td><code>～た</code></td>
+                    </tr>
+                    <tr>
+                        <td>Progressive</td>
+                        <td><code>~て</code>＋いる</td>
+                    </tr>
+                    <tr>
+                        <td>Negative present/future</td>
+                        <td><code>～あ</code>＋ない</td>
+                    </tr>
+                    <tr>
+                        <td>Negative past</td>
+                        <td><code>～あ</code>＋なかった</td>
+                    </tr>
+                    <tr>
+                        <td>Command</td>
+                        <td>
+                            <code>～て</code><br>
+                            <hr>
+                            Godan <code>～え</code><br>
+                            Ichidan <code>～い</code>＋ろ<br>
+                            する → しろ、
+                            くる → こい <small>Considered rude</small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Negative command</td>
+                        <td>
+                            <code>～あ</code>＋ないで<br>
+                            <code>～う</code>＋な <small>Considered rude</small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Potential <small>can/able to</small></td>
+                        <td>
+                            Godan <code>~え</code>＋る<br>
+                            Ichidan <code>~あ</code>＋られる<br>
+                            する → できる、
+                            くる → これる
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Want to</td>
+                        <td><code>～い</code>＋たい</td>
+                    </tr>
+                    <tr>
+                        <td>Don't want to</td>
+                        <td><code>～い</code>＋たくない</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Let's do<br>
+                            Shall we...
+                        </td>
+                        <td>
+                            <code>~おう</code><br>
+                            <code>~おう</code>＋か<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Passive <small>to be ~ed</small></td>
+                        <td>
+                            Godan <code>~あ</code>＋れる<br>
+                            Ichidan <code>~あ</code>＋られる<br>
+                            する → される、
+                            くる → こられる
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Causative <small>to allow, force someone to ~</small></td>
+                        <td>
+                            Godan <code>~あ</code>＋せる<br>
+                            Ichidan <code>~あ</code>＋させる<br>
+                            する → させる、
+                            くる → こさせる
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
     <script type="text/javascript">
-        // 0-3 Hues from more to less saturated
-        // 4 Font color
-        // 5 Table title font color
         const themePool = [
-            ['#7469B6','#AD88C6','#E1AFD1','#FFE6E6','#000','#FFF'], // Fucsia
+            ['#7469B6','#AD88C6','#E8C2DC','#FFE6E6','#000','#FFF'], // Fucsia
             ['#55AD9B','#95D2B3','#D8EFD3','#F1F8E8','#000','#000'], // Suave Green
-            ['#FFCCCC','#FEBBCC','#FFDDCC','#FFEECC','#000','#000'], // BubbleGum
+            ['#FEBBCC','#FFCCCC','#FFDDCC','#FFEECC','#000','#000'], // BubbleGum
             ['#FF7D29','#FFBF78','#FFEEA9','#FEFFD2','#000','#FFF'], // 100%OrangeJuice
-            ['#FF9494','#FFD1D1','#FFE3E1','#FFF5E4','#000','#000'], // いちご
+            ['#FF9494','#FFD1D1','#FFE3E1','#FFF5E4','#000','#000'], // いちご🍓
         ];
         const theme = themePool[Math.floor(Math.random() * themePool.length)]
         document.documentElement.style.setProperty("--theme-color-1", theme[0]);

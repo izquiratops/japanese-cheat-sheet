@@ -21,7 +21,7 @@
 
 body {
     text-rendering: optimizeLegibility;
-    font-family: Open Sans,sans-serif;
+    font-family: Open Sans, sans-serif;
     color: var(--font-color);
     line-height: 1.5rem;
     background: var(--theme-color-4);
@@ -47,7 +47,8 @@ code {
 table {
     position: relative;
     width: 100%;
-    margin: 0 auto;
+    margin-inline: auto;
+    margin-block: 0px var(--spacing-2-extra-large);
     border-collapse: collapse;
     border-radius: var(--border-radius);
 
@@ -57,7 +58,7 @@ table {
 
     thead {
         color: var(--contrast-font-color);
-        background: var(--theme-color-1);
+        background-color: var(--theme-color-1);
     }
 
     tbody {
@@ -79,6 +80,21 @@ table {
 small {
     color: #444;
     font-style: italic;
+}
+
+hr {
+    color: var(--theme-color-2);
+    border-color: var(--theme-color-2);
+    background-color: var(--theme-color-2);
+}
+
+.github__logo {
+    position: absolute;
+    top: var(--spacing-medium);
+    left: var(--spacing-medium);
+    transform: rotate(-12deg);
+    height: 36px;
+    width: 36px;
 }
 
 .page__title {
@@ -106,9 +122,11 @@ small {
 
 .legend {
     position: relative;
+    background: repeating-linear-gradient( 45deg, var(--theme-color-4), var(--theme-color-4) 2px, var(--theme-color-3) 2px, var(--theme-color-3) 25px );
     background-color: var(--theme-color-2);
     border: 1px solid var(--theme-color-1);
-    margin: 0px 0px var(--spacing-2-extra-large) 0px;
+    margin: 0px;
+    margin-block-end: var(--spacing-2-extra-large);
     padding: var(--spacing-medium);
     border-radius: var(--border-radius);
 }
@@ -139,5 +157,15 @@ table, .legend {
         height: 100%;
         background: var(--theme-color-1);
         border-radius: var(--border-radius);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .github__logo {
+        display: none;
+    }
+
+    .two__columns {
+        display: block;
     }
 }
