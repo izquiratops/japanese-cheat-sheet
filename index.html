@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⛩️ Japanse Cheat Sheet</title>
+    <title>Japanse Cheat Sheet</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="https://github.com/izquiratops/japanese-cheat-sheet">
+    <a href="https://github.com/izquiratops/japanese-cheat-sheet" title="Fork me on Github!">
         <img src="./github-mark.svg" class="github__logo">
     </a>
     <div class="page">
         <div class="page__content">
             <h1 class="page__title">Japanese Cheat Sheet</h1>
-            <blockquote class="legend folded" id="legend">
-                <div class="legend__toggle__button" onclick="toggleExpandLegend()">
+            <blockquote class="legend" id="legend">
+                <div class="legend__toggle__button" onclick="toggleExpandLegend()" title="Toggle legend">
                     ➕
                 </div>
                 <strong>Symbols</strong>
@@ -177,11 +177,11 @@
                 <tbody>
                     <tr>
                         <td>Present/Future</td>
-                        <td><code>～い</code>＋ます</td>
+                        <td>＋ます</td>
                     </tr>
                     <tr>
                         <td>Past</td>
-                        <td><code>～い</code>＋ました</td>
+                        <td>＋ました</td>
                     </tr>
                     <tr>
                         <td>Progressive</td>
@@ -189,11 +189,11 @@
                     </tr>
                     <tr>
                         <td>Negative present/future</td>
-                        <td><code>～い</code>＋ません</td>
+                        <td>＋ません</td>
                     </tr>
                     <tr>
                         <td>Negative past</td>
-                        <td><code>～い</code>＋ませんでした</td>
+                        <td>＋ませんでした</td>
                     </tr>
                     <tr>
                         <td>Command</td>
@@ -229,8 +229,8 @@
                             Shall we...
                         </td>
                         <td>
-                            <code>~i</code>＋ましょう<br>
-                            <code>~i</code>＋ましょう<br>
+                            ＋ましょう<br>
+                            ＋ましょう
                         </td>
                     </tr>
                     <tr>
@@ -370,12 +370,12 @@
             const legendElement = document.getElementById('legend');
             const toggleButtonElement = legendElement.querySelector('.legend__toggle__button');
 
-            if (legendElement.classList.contains('folded')) {
-                legendElement.classList.remove('folded');
-                toggleButtonElement.textContent = "➖"
+            if (legendElement.classList.contains('expanded')) {
+                legendElement.classList.remove('expanded');
+                toggleButtonElement.textContent = "➕";
             } else {
-                legendElement.classList.add('folded');
-                toggleButtonElement.textContent = "➕"
+                legendElement.classList.add('expanded');
+                toggleButtonElement.textContent = "➖";
             }
         }
     </script>

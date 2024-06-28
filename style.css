@@ -22,8 +22,10 @@
 body {
     text-rendering: optimizeLegibility;
     font-family: Open Sans, sans-serif;
-    color: var(--font-color);
     line-height: 1.5rem;
+
+    /* Theme */
+    color: var(--font-color);
     background: var(--theme-color-4);
 }
 
@@ -75,6 +77,18 @@ table {
             padding-block: 4px;
         }
     }
+
+    ::after {
+        content: "";
+        position: absolute;
+        left: var(--spacing-small);
+        top: var(--spacing-small);
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background: var(--theme-color-2);
+        border-radius: var(--border-radius);
+    }
 }
 
 small {
@@ -100,6 +114,7 @@ hr {
 .page__title {
     text-align: center;
     padding-block: var(--spacing-extra-large);
+    line-height: 1.2;
 }
 
 .page {
@@ -114,24 +129,28 @@ hr {
     padding: 0 15px 40px;
 }
 
-.theme-button {
-    width: 32px;
-    height: 32px;
-    border: 2px solid black;
-}
-
 .legend {
     position: relative;
-    background: repeating-linear-gradient( 45deg, var(--theme-color-4), var(--theme-color-4) 2px, var(--theme-color-3) 2px, var(--theme-color-3) 25px );
-    background-color: var(--theme-color-2);
+    background-position: 0px 0px;
+    background-color: var(--theme-color-3);
     border: 1px solid var(--theme-color-1);
     border-radius: var(--border-radius);
+
     /* Spacing */
     margin: 0px;
-    margin-block-end: var(--spacing-2-extra-large);
     padding: var(--spacing-medium);
+
     /* Misc */
     overflow: hidden;
+
+    /* Animated height */
+    max-height: 80px;
+    transition: max-height 0.25s ease-out;
+
+    &.expanded {
+        max-height: 900px;
+        transition: max-height 0.25s ease-in;
+    }
 }
 
 .legend__toggle__button {
@@ -156,28 +175,13 @@ hr {
     padding-inline: var(--spacing-medium);
 }
 
-.folded {
-    max-height: 80px;
-}
-
-/* Contrast shadow */
-table, .legend {
-    ::after {
-        content: "";
-        position: absolute;
-        left: var(--spacing-small);
-        top: var(--spacing-small);
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        background: var(--theme-color-1);
-        border-radius: var(--border-radius);
-    }
-}
-
 @media screen and (max-width: 600px) {
     .github__logo {
         display: none;
+    }
+
+    .page__title {
+        padding: 0;
     }
 
     .two__columns {
