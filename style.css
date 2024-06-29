@@ -7,6 +7,7 @@
     --spacing-2-extra-large: 48px;
 
     /* Other values */
+    --icon-size: 24px;
     --border-radius: 4px;
 
     /* Theme by default, but it's randomly applied on load */
@@ -53,10 +54,7 @@ table {
     margin-block: 0px var(--spacing-2-extra-large);
     border-collapse: collapse;
     border-radius: var(--border-radius);
-
-    outline-width: 1px;
-    outline-color: var(--theme-color-1);
-    outline-style: solid;
+    outline: 1px solid var(--theme-color-1);
 
     thead {
         color: var(--contrast-font-color);
@@ -114,6 +112,14 @@ hr {
     transform: rotate(-12deg);
     height: 36px;
     width: 36px;
+
+    opacity: 0.7;
+    transition: opacity 0.25s ease-out;
+
+    &:hover {
+        opacity: 1.0;
+        transition: opacity 0.25s ease-out;
+    }
 }
 
 .page__title {
@@ -158,14 +164,21 @@ hr {
     }
 }
 
-.legend__toggle__button {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 24px;
-    height: 24px;
-    margin: var(--spacing-small);
+/* These buttons are found at the bottom right of their containers */
+.icon__button {
+    bottom: var(--spacing-small);
+    right: var(--spacing-small);
+    width: var(--icon-size);
+    height: var(--icon-size);
     cursor: pointer;
+
+    &.jump {
+        position: fixed;
+    }
+
+    &.toggle {
+        position: absolute;
+    }
 }
 
 .legend__symbol {

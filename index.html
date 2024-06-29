@@ -7,14 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="https://github.com/izquiratops/japanese-cheat-sheet" title="Fork me on Github!">
+    <a href="https://github.com/izquiratops/japanese-cheat-sheet" target="_blank" rel="noopener noreferrer" title="Fork me on Github!">
         <img src="./github-mark.svg" class="github__logo">
     </a>
-    <div class="page">
+    <a class="icon__button jump" onclick="scrollToTop()" title="Scroll to the top 🦘">
+        <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330">
+            <g>
+                <path d="M100.606,100.606L150,51.212V315c0,8.284,6.716,15,15,15c8.284,0,15-6.716,15-15V51.212l49.394,49.394 C232.322,103.535,236.161,105,240,105c3.839,0,7.678-1.465,10.606-4.394c5.858-5.857,5.858-15.355,0-21.213l-75-75 c-5.857-5.858-15.355-5.858-21.213,0l-75,75c-5.858,5.857-5.858,15.355,0,21.213C85.251,106.463,94.749,106.463,100.606,100.606z"></path>
+            </g>
+        </svg>
+    </a>
         <div class="page__content">
             <h1 class="page__title">Japanese Cheat Sheet</h1>
             <blockquote class="legend" id="legend">
-                <a class="legend__toggle__button" onclick="toggleExpandLegend()" title="Toggle legend">
+                <a class="icon__button toggle" onclick="toggleExpandLegend()" title="Toggle legend">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
                         <path d="M4 12H20M12 4V20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -390,9 +396,9 @@
             </table>
 
             <h2>Kanji 漢字</h2>
-            <h3 id="kanji-anki-file">My Anki file</h3>
+            <h3 id="kanji-anki-file">My Anki file 💾</h3>
             <p>At the moment, I am utilizing the Basic Kanji Book (Vol. 1) to initiate with the most basic ones. After finishing a lesson, I will add all the vocabulary found there. From time to time, this page will receive a new updated version.</p>
-            The .apkg file is hosted in the same repository as this site, you can <a href="./basic-kanji-book-vol1.apkg" download>download it 💾</a> here.
+            The .apkg file is hosted in the same repository as this site, you can <a href="./basic-kanji-book-vol1.apkg" download>download it from here</a>.
         </div>
     </div>
     <script type="text/javascript">
@@ -411,7 +417,7 @@
         const theme = themePool[Math.floor(Math.random() * themePool.length)]
 
         const legendElement = document.getElementById('legend');
-        const togglePathElement = legendElement.querySelector('path');
+        const legendPathElement = legendElement.querySelector('path');
 
         document.documentElement.style.setProperty("--theme-color-1", theme[0]);
         document.documentElement.style.setProperty("--theme-color-2", theme[1]);
@@ -419,16 +425,19 @@
         document.documentElement.style.setProperty("--theme-color-4", theme[3]);
         document.documentElement.style.setProperty("--font-color", theme[4]);
         document.documentElement.style.setProperty("--contrast-font-color", theme[5]);
-        togglePathElement.setAttribute('stroke', theme[0]);
+        legendPathElement.setAttribute('stroke', theme[0]);
 
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
 
         function toggleExpandLegend() {
             if (legendElement.classList.contains('expanded')) {
                 legendElement.classList.remove('expanded');
-                togglePathElement.setAttribute('d', plusIconPath);
+                legendPathElement.setAttribute('d', plusIconPath);
             } else {
                 legendElement.classList.add('expanded');
-                togglePathElement.setAttribute('d', minusIconPath);
+                legendPathElement.setAttribute('d', minusIconPath);
             }
         }
     </script>
