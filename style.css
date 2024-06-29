@@ -7,7 +7,7 @@
     --spacing-2-extra-large: 48px;
 
     /* Other values */
-    --icon-size: 24px;
+    --icon-size: 32px;
     --border-radius: 4px;
 
     /* Theme by default, but it's randomly applied on load */
@@ -41,10 +41,11 @@ a {
 
 code {
     font-family: Open Sans,sans-serif;
+    text-wrap: nowrap;
     color: var(--contrast-font-color);
     background: var(--theme-color-1);
     border-radius: 4px;
-    padding: 2px 8px;
+    padding: 4px;
 }
 
 table {
@@ -74,6 +75,10 @@ table {
             padding-inline: var(--spacing-small);
             padding-block: 4px;
         }
+    }
+
+    &.centered__text {
+        text-align: center;
     }
 
     ::after {
@@ -166,19 +171,34 @@ hr {
 
 /* These buttons are found at the bottom right of their containers */
 .icon__button {
-    bottom: var(--spacing-small);
+    /* Position and size */
     right: var(--spacing-small);
     width: var(--icon-size);
     height: var(--icon-size);
-    cursor: pointer;
 
     &.jump {
         position: fixed;
+        bottom: var(--spacing-small);
     }
 
     &.toggle {
         position: absolute;
+        top: var(--spacing-small);
     }
+
+    /* Button properties */
+    cursor: pointer;
+    z-index: 2;
+
+    /* Make the gradient bigger than the icon */
+    svg {
+        padding: 6px;
+    }
+}
+
+.jump {
+    /* Gradient background to improve contrast */
+    background-image: radial-gradient(50% 50% at 50% 50%, var(--theme-color-4) 0%, #FFFFFF00 100%);
 }
 
 .legend__symbol {
@@ -186,13 +206,10 @@ hr {
     width: 2rem;
 }
 
-.two__columns {
+.columns__container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.column {
-    padding-inline: var(--spacing-medium);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-column-gap: var(--spacing-medium);
 }
 
 @media screen and (max-width: 600px) {
@@ -202,10 +219,6 @@ hr {
 
     .page__title {
         padding: 0;
-    }
-
-    .two__columns {
-        display: block;
     }
 
     /* Example column doesn't appear on mobile */
