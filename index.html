@@ -14,9 +14,11 @@
         <div class="page__content">
             <h1 class="page__title">Japanese Cheat Sheet</h1>
             <blockquote class="legend" id="legend">
-                <div class="legend__toggle__button" onclick="toggleExpandLegend()" title="Toggle legend">
-                    ➕
-                </div>
+                <a class="legend__toggle__button" onclick="toggleExpandLegend()" title="Toggle legend">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                        <path d="M4 12H20M12 4V20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
                 <strong>Symbols</strong>
                 <div class="two__columns">
                     <ul class="column">
@@ -47,6 +49,7 @@
                     </ul>
                 </div>
             </blockquote>
+
             <h2 id="table-of-contents">Table of contents</h2>
             <div class="two__columns">
                 <div class="column">
@@ -59,37 +62,40 @@
                             <a href="#informal-verbs">Informal Verbs</a>
                         </li>
                         <li>
-                            <a href="#verb-usages">Verb usages</a>
+                            <a href="#verb-usages" class="disabled">Verb usages</a>
                         </li>
                         <li>
-                            <a href="#conjugating-verbs">Conjugating verbs</a>
+                            <a href="#conjugating-verbs" class="disabled">Conjugating verbs</a>
                         </li>
                     </ul>
                     <strong>Syllabary</strong>
                     <ul class="table__of__contents">
                         <li>
-                            <a href="#hiragana">Hiragana あ</a>
+                            <a href="#hiragana" class="disabled">Hiragana あ</a>
                         </li>
                         <li>
-                            <a href="#verb-usages">Katakana ア</a>
+                            <a href="#verb-usages" class="disabled">Katakana ア</a>
                         </li>
                     </ul>
                     <strong>Kanji</strong>
                     <ul class="table__of__contents">
                         <li>
-                            <a href="#jlpt-n5">JLPT N5</a>
+                            <a href="#kanji-anki-file">Kanji Anki file</a>
+                        </li>
+                        <li>
+                            <a href="#jlpt-n5" class="disabled">List of JLPT N5</a>
                         </li>
                     </ul>
                     <strong>Conjugations</strong>
                     <ul class="table__of__contents">
                         <li>
-                            <a href="#conjugating-verbs">Conjugating Verbs</a>
+                            <a href="#conjugating-verbs" class="disabled">Conjugating Verbs</a>
                         </li>
                         <li>
-                            <a href="#forms-of-to-be">Forms of である</a>
+                            <a href="#forms-of-to-be" class="disabled">Forms of である</a>
                         </li>
                         <li>
-                            <a href="#adjective-conjugation">Adjective Conjugation</a>
+                            <a href="#adjective-conjugation" class="disabled">Adjective Conjugation</a>
                         </li>
                     </ul>
                 </div>
@@ -97,70 +103,70 @@
                     <strong>Particles</strong>
                     <ul class="table__of__contents">
                         <li>
-                            <a href="#particle-ha">Topic marker は (HA)</a>
+                            <a href="#particle-ha" class="disabled">Topic marker は (HA)</a>
                         </li>
                         <li>
-                            <a href="#particle-ga">Subject marker が (GA)</a>
+                            <a href="#particle-ga" class="disabled">Subject marker が (GA)</a>
                         </li>
                         <li>
-                            <a href="#particle-wo">Object marker を (WO)</a>
+                            <a href="#particle-wo" class="disabled">Object marker を (WO)</a>
                         </li>
                         <li>
-                            <a href="#particle-ni">The "Aiming" particle に (NI)</a>
+                            <a href="#particle-ni" class="disabled">The "Aiming" particle に (NI)</a>
                         </li>
                         <li>
-                            <a href="#particle-to">The "Glue" particle と (TO)</a>
+                            <a href="#particle-to" class="disabled">The "Glue" particle と (TO)</a>
                         </li>
                         <li>
-                            <a href="#particle-de">The "Enabling" particle で (DE)</a>
+                            <a href="#particle-de" class="disabled">The "Enabling" particle で (DE)</a>
                         </li>
                         <li>
-                            <a href="#particle-mo">Even/Also marker も (MO)</a>
+                            <a href="#particle-mo" class="disabled">Even/Also marker も (MO)</a>
                         </li>
                         <li>
-                            <a href="#particle-ka">Question Marker か (KA)</a>
+                            <a href="#particle-ka" class="disabled">Question Marker か (KA)</a>
                         </li>
                         <li>
-                            <a href="#particle-he">Destination Marker へ (HE)</a>
+                            <a href="#particle-he" class="disabled">Destination Marker へ (HE)</a>
                         </li>
                         <li>
-                            <a href="#particle-no">Possession Marker の (NO)</a>
+                            <a href="#particle-no" class="disabled">Possession Marker の (NO)</a>
                         </li>
                         <li>
-                            <a href="#particle-ya">Incomplete "and" group や (YA)</a>
+                            <a href="#particle-ya" class="disabled">Incomplete "and" group や (YA)</a>
                         </li>
                     </ul>
                     <strong>Comparison Particles</strong>
                     <ul class="table__of__contents">
                         <li>
-                            <a href="#particle-yori">より (YORI)</a>
+                            <a href="#particle-yori" class="disabled">より (YORI)</a>
                         </li>
                         <li>
-                            <a href="#particle-hodo">ほど (HODO)</a>
+                            <a href="#particle-hodo" class="disabled">ほど (HODO)</a>
                         </li>
                         <li>
-                            <a href="#particle-dake">だけ (DAKE)</a>
+                            <a href="#particle-dake" class="disabled">だけ (DAKE)</a>
                         </li>
                         <li>
-                            <a href="#particle-kurai">くらい (KURAI)</a>
+                            <a href="#particle-kurai" class="disabled">くらい (KURAI)</a>
                         </li>
                         <li>
-                            <a href="#particle-bakari">ばかり (BAKARI)</a>
+                            <a href="#particle-bakari" class="disabled">ばかり (BAKARI)</a>
                         </li>
                         <li>
-                            <a href="#particle-demo">でも (DEMO)</a>
+                            <a href="#particle-demo" class="disabled">でも (DEMO)</a>
                         </li>
                         <li>
-                            <a href="#particle-shika">しか (SHIKA)</a>
+                            <a href="#particle-shika" class="disabled">しか (SHIKA)</a>
                         </li>
                     </ul>
                     <strong>Other Particles</strong>
                     <ul class="table__of__contents">
                         <li>
-                            <a href="#particle-kara">From/Because から (KARA)</a>
+                            <a href="#particle-kara" class="disabled">From/Because から (KARA)</a>
                         </li>
                         <li>
-                            <a href="#particle-made">Until/To まで (MADE)</a>
+                            <a href="#particle-made" class="disabled">Until/To まで (MADE)</a>
                         </li>
                     </ul>
                 </div>
@@ -172,39 +178,62 @@
                     <tr>
                         <th>Tense name</th>
                         <th>Form</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Present/Future</td>
                         <td>＋ます</td>
+                        <td>たべます</td>
                     </tr>
                     <tr>
                         <td>Past</td>
                         <td>＋ました</td>
+                        <td>たべました</td>
                     </tr>
                     <tr>
-                        <td>Progressive</td>
+                        <td>
+                            <span>
+                                Progressive
+                            </span>
+                            <a href="https://guidetojapanese.org/learn/complete/progressive_tense" target="_blank" rel="noopener noreferrer"><small>Tae Kim 🔗</small></a>
+                        </td>
                         <td><code>~て</code>＋います</td>
+                        <td>たべています</td>
                     </tr>
                     <tr>
-                        <td>Negative present/future</td>
+                        <td>
+                            <span>
+                                Negative present/future
+                            </span>
+                            <a href="https://guidetojapanese.org/learn/complete/polite_negative" target="_blank" rel="noopener noreferrer"><small>Tae Kim 🔗</small></a>
+                        </td>
                         <td>＋ません</td>
+                        <td>たべました</td>
                     </tr>
                     <tr>
                         <td>Negative past</td>
                         <td>＋ませんでした</td>
+                        <td>たべませんでした</td>
                     </tr>
                     <tr>
-                        <td>Command</td>
+                        <td>
+                            <span>
+                                Negative present/future
+                            </span>
+                            <a href="https://guidetojapanese.org/learn/complete/command" target="_blank" rel="noopener noreferrer"><small>Tae Kim 🔗</small></a>
+                        </td>
                         <td>
                             <code>～て</code>＋ください<br>
                             <code>～い</code>＋なさい ⬇️
                         </td>
+                        <td>たべてください</td>
                     </tr>
                     <tr>
                         <td>Negative command</td>
                         <td><code>～あ</code>＋ないでください</td>
+                        <td>たべました</td>
                     </tr>
                     <tr>
                         <td>Potential <small>can/able to</small></td>
@@ -214,14 +243,17 @@
                             する → できます、
                             くる → こられます
                         </td>
+                        <td>たべました</td>
                     </tr>
                     <tr>
                         <td>Want to</td>
                         <td><code>～い</code>＋たいです</td>
+                        <td>たべました</td>
                     </tr>
                     <tr>
                         <td>Don't want to 1️⃣</td>
                         <td><code>～い</code>＋たくないです</td>
+                        <td>たべました</td>
                     </tr>
                     <tr>
                         <td>
@@ -232,6 +264,7 @@
                             ＋ましょう<br>
                             ＋ましょう
                         </td>
+                        <td>たべました</td>
                     </tr>
                     <tr>
                         <td>Passive <small>to be ~ed</small></td>
@@ -241,6 +274,7 @@
                             する → されます、
                             くる → こられます
                         </td>
+                        <td>たべました</td>
                     </tr>
                     <tr>
                         <td>Causative <small>to allow, force someone to ~</small></td>
@@ -250,6 +284,7 @@
                             する → させます、
                             くる → こさせます
                         </td>
+                        <td>たべました</td>
                     </tr>
                 </tbody>
             </table>
@@ -268,7 +303,12 @@
                         <td><code>～う</code></td>
                     </tr>
                     <tr>
-                        <td>Past</td>
+                        <td>
+                            <span>
+                                Past
+                            </span>
+                            <a href="https://guidetojapanese.org/learn/complete/verb_past" target="_blank" rel="noopener noreferrer"><small>Tae Kim 🔗</small></a>
+                        </td>
                         <td><code>～た</code></td>
                     </tr>
                     <tr>
@@ -348,34 +388,47 @@
                     </tr>
                 </tbody>
             </table>
+
+            <h2>Kanji 漢字</h2>
+            <h3 id="kanji-anki-file">My Anki file</h3>
+            <p>At the moment, I am utilizing the Basic Kanji Book (Vol. 1) to initiate with the most basic ones. After finishing a lesson, I will add all the vocabulary found there. From time to time, this page will receive a new updated version.</p>
+            The .apkg file is hosted in the same repository as this site, you can <a href="./basic-kanji-book-vol1.apkg" download>download it 💾</a> here.
         </div>
     </div>
     <script type="text/javascript">
+        const plusIconPath = 'M4 12H20M12 4V20';
+        const minusIconPath = 'M 4 12 L 20 12';
         const themePool = [
             ['#7469B6','#AD88C6','#E8C2DC','#FFE6E6','#000','#FFF'], // Fucsia
-            ['#55AD9B','#95D2B3','#D8EFD3','#F1F8E8','#000','#000'], // Suave Green
-            ['#FEBBCC','#FFCCCC','#FFDDCC','#FFEECC','#000','#000'], // BubbleGum
+            ['#55AD9B','#95D2B3','#D8EFD3','#F1F8E8','#000','#000'], // SuaveGreen
+            ['#99BC85','#BFD8AF','#D4E7C5','#E1F0DA','#000','#000'], // Matcha
             ['#FF7D29','#FFBF78','#FFEEA9','#FEFFD2','#000','#FFF'], // 100%OrangeJuice
             ['#FF9494','#FFD1D1','#FFE3E1','#FFF5E4','#000','#000'], // いちご🍓
+            ['#874356','#F68989','#C65D7B','#F6E7D8','#000','#FFF'], // DarkRed
         ];
+
+        // Theme randomly chosen
         const theme = themePool[Math.floor(Math.random() * themePool.length)]
+
+        const legendElement = document.getElementById('legend');
+        const togglePathElement = legendElement.querySelector('path');
+
         document.documentElement.style.setProperty("--theme-color-1", theme[0]);
         document.documentElement.style.setProperty("--theme-color-2", theme[1]);
         document.documentElement.style.setProperty("--theme-color-3", theme[2]);
         document.documentElement.style.setProperty("--theme-color-4", theme[3]);
         document.documentElement.style.setProperty("--font-color", theme[4]);
         document.documentElement.style.setProperty("--contrast-font-color", theme[5]);
+        togglePathElement.setAttribute('stroke', theme[0]);
+
 
         function toggleExpandLegend() {
-            const legendElement = document.getElementById('legend');
-            const toggleButtonElement = legendElement.querySelector('.legend__toggle__button');
-
             if (legendElement.classList.contains('expanded')) {
                 legendElement.classList.remove('expanded');
-                toggleButtonElement.textContent = "➕";
+                togglePathElement.setAttribute('d', plusIconPath);
             } else {
                 legendElement.classList.add('expanded');
-                toggleButtonElement.textContent = "➖";
+                togglePathElement.setAttribute('d', minusIconPath);
             }
         }
     </script>

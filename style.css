@@ -102,6 +102,11 @@ hr {
     background-color: var(--theme-color-2);
 }
 
+.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
 .github__logo {
     position: absolute;
     top: var(--spacing-medium);
@@ -157,6 +162,8 @@ hr {
     position: absolute;
     bottom: 0;
     right: 0;
+    width: 24px;
+    height: 24px;
     margin: var(--spacing-small);
     cursor: pointer;
 }
@@ -186,5 +193,10 @@ hr {
 
     .two__columns {
         display: block;
+    }
+
+    /* Example column doesn't appear on mobile */
+    td:nth-child(3) {
+        display: none;
     }
 }
