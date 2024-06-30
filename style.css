@@ -32,6 +32,7 @@ body {
 
 body, html {
     height: 100%;
+    margin: 0;
 }
 
 h3 {
@@ -41,6 +42,11 @@ h3 {
 a {
     color: var(--toc-link-color);
     text-decoration: none;
+
+    &.disabled {
+        opacity: 0.3;
+        pointer-events: none;
+    }
 }
 
 code {
@@ -81,10 +87,6 @@ table {
         }
     }
 
-    &.centered__text {
-        text-align: center;
-    }
-
     ::after {
         content: "";
         position: absolute;
@@ -109,40 +111,20 @@ hr {
     background-color: var(--theme-color-2);
 }
 
-.disabled {
-    opacity: 0.3;
-    pointer-events: none;
-}
-
-.github__logo {
-    position: absolute;
-    top: var(--spacing-medium);
-    left: var(--spacing-medium);
-    height: 36px;
-    width: 36px;
-    transform: rotate(-12deg);
-
-    /* Logo animates on hover */
-    opacity: 0.7;
-    transition: opacity 0.25s ease-out;
-
-    &:hover {
-        opacity: 1.0;
-        transition: opacity 0.25s ease-out;
-    }
-}
-
 .page__content {
     word-wrap: break-word;
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 15px 40px;
+    padding: 0 var(--spacing-medium);
 }
 
 .page__title {
-    text-align: center;
     padding-block: var(--spacing-extra-large);
     line-height: 1.2;
+}
+
+.centered__text {
+    text-align: center;
 }
 
 .legend {
@@ -174,7 +156,11 @@ hr {
     }
 }
 
-/* These buttons are found at the bottom right of their containers */
+.checkbox__wrapper {
+    float: inline-end;
+    margin: var(--spacing-small);
+}
+
 .icon__button {
     /* Position and size */
     right: var(--spacing-small);
@@ -193,11 +179,38 @@ hr {
 
     /* Button properties */
     cursor: pointer;
-    z-index: 2;
 
     /* Make the gradient bigger than the icon */
     svg {
         padding: 6px;
+    }
+}
+
+.columns__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    column-gap: var(--spacing-medium);
+}
+
+.footer {
+    padding-block-end: 70px;
+}
+
+.github__logo {
+    position: absolute;
+    top: var(--spacing-medium);
+    left: var(--spacing-medium);
+    height: 36px;
+    width: 36px;
+    transform: rotate(-12deg);
+
+    /* Logo animates on hover */
+    opacity: 0.7;
+    transition: opacity 0.25s ease-out;
+
+    &:hover {
+        opacity: 1.0;
+        transition: opacity 0.25s ease-out;
     }
 }
 
@@ -206,12 +219,7 @@ hr {
     background-image: radial-gradient(50% 50% at 50% 50%, var(--theme-color-4) 0%, #FFFFFF00 100%);
 }
 
-.columns__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-column-gap: var(--spacing-medium);
-}
-
+/* Mobile */
 @media screen and (max-width: 600px) {
     .github__logo {
         display: none;

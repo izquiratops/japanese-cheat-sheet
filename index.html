@@ -5,26 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Japanse Cheat Sheet</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <a href="https://github.com/izquiratops/japanese-cheat-sheet" target="_blank" rel="noopener noreferrer"
-        title="Fork me on Github!" tabindex="-1">
-        <img src="./github-mark.svg" class="github__logo" alt="Github logo">
-    </a>
-    <a class="icon__button jump" onclick="scrollToTop()" title="Scroll to the top 🦘" tabindex="-1">
-        <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 0 330 330">
-            <g>
-                <path
-                    d="M100.606,100.606L150,51.212V315c0,8.284,6.716,15,15,15c8.284,0,15-6.716,15-15V51.212l49.394,49.394 C232.322,103.535,236.161,105,240,105c3.839,0,7.678-1.465,10.606-4.394c5.858-5.857,5.858-15.355,0-21.213l-75-75 c-5.857-5.858-15.355-5.858-21.213,0l-75,75c-5.858,5.857-5.858,15.355,0,21.213C85.251,106.463,94.749,106.463,100.606,100.606z">
-                </path>
-            </g>
-        </svg>
-    </a>
     <div class="page__content">
-        <h1 class="page__title">Japanese Cheat Sheet</h1>
+        <h1 class="page__title centered__text">Japanese Cheat Sheet</h1>
         <blockquote class="legend" id="legend">
             <a class="icon__button toggle" onclick="toggleExpandLegend()" title="Toggle legend" tabindex="-1">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
@@ -100,6 +87,8 @@
                         <a href="#jlpt-n5" class="disabled" tabindex="-1">List of JLPT N5</a>
                     </li>
                 </ul>
+            </section>
+            <section>
                 <strong>Conjugations</strong>
                 <ul class="table__of__contents">
                     <li>
@@ -112,8 +101,6 @@
                         <a href="#adjective-conjugation" class="disabled" tabindex="-1">Adjective Conjugation</a>
                     </li>
                 </ul>
-            </section>
-            <section>
                 <strong>Particles</strong>
                 <ul class="table__of__contents">
                     <li>
@@ -150,6 +137,8 @@
                         <a href="#particle-ya" class="disabled" tabindex="-1">Incomplete "and" group や (YA)</a>
                     </li>
                 </ul>
+            </section>
+            <section>
                 <strong>Comparison Particles</strong>
                 <ul class="table__of__contents">
                     <li>
@@ -327,9 +316,9 @@
             </section>
         </div>
 
-        <h2 id="polite-verbs">Polite Verbs <small>Working on that! ⛏️</small></h2>
-        <div>
-            <input type="checkbox" name="polite-examples" checked />
+        <h2 id="polite-verbs">Polite Verbs</h2>
+        <div class="checkbox__wrapper">
+            <input type="checkbox" name="polite-examples" checked disabled />
             <label for="polite-examples">Show examples</label>
         </div>
         <table>
@@ -437,7 +426,11 @@
             </tbody>
         </table>
 
-        <h2 id="informal-verbs">Informal Verbs <small>Working on that too! ⛏️</small></h2>
+        <h2 id="informal-verbs">Informal Verbs</h2>
+        <div class="checkbox__wrapper">
+            <input type="checkbox" name="polite-examples" checked disabled />
+            <label for="polite-examples">Show examples</label>
+        </div>
         <table>
             <thead>
                 <tr>
@@ -545,8 +538,27 @@
             new updated version.</p>
         The .apkg file is hosted in the same repository as this site, you can <a href="./basic-kanji-book-vol1.apkg"
             download>download it from here</a>.
+        <p class="footer centered__text">
+            <small>The process of creating this site involved listening to a lot of silly playlists and Persona
+                soundtracks.
+                <a href="https://x.com/hamboorglar" target="_blank" rel="noopener noreferrer">Jordi</a>
+            </small>
+        </p>
     </div>
-    </div>
+    <a href="https://github.com/izquiratops/japanese-cheat-sheet" target="_blank" rel="noopener noreferrer"
+        title="Fork me on Github!" tabindex="-1">
+        <img src="./github-mark.svg" class="github__logo" alt="Github logo">
+    </a>
+    <a class="icon__button jump" onclick="scrollToTop()" title="Scroll to the top 🦘" tabindex="-1">
+        <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 330 330">
+            <g>
+                <path
+                    d="M100.606,100.606L150,51.212V315c0,8.284,6.716,15,15,15c8.284,0,15-6.716,15-15V51.212l49.394,49.394 C232.322,103.535,236.161,105,240,105c3.839,0,7.678-1.465,10.606-4.394c5.858-5.857,5.858-15.355,0-21.213l-75-75 c-5.857-5.858-15.355-5.858-21.213,0l-75,75c-5.858,5.857-5.858,15.355,0,21.213C85.251,106.463,94.749,106.463,100.606,100.606z">
+                </path>
+            </g>
+        </svg>
+    </a>
     <script type="text/javascript">
         const plusIconPath = 'M4 12H20M12 4V20';
         const minusIconPath = 'M 4 12 L 20 12';
