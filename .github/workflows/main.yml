@@ -20,11 +20,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install minifier
+        run: cargo install minhtml
+
       - name: Minify HTML
-        run: npx minhtml --output /dist/index.html --minify-js index.html
+        run: minhtml --output /dist/index.html --minify-js index.html
 
       - name: Minify CSS
-        run: npx minhtml --output /dist/style.css --minify-css style.css
+        run: minhtml --output /dist/style.css --minify-css style.css
 
       - name: Copy assets
         run: cp ./assets ./dist
