@@ -1,0 +1,42 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: ['main']
+  # Allows you to run this workflow manually from the Actions tab ✨
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install minifier
+        run: npm i @minify-html/node
+
+      - name: Minify HTML
+        run: minhtml --output /dist/index.html --minify-js index.html
+
+      - name: Minify CSS
+        run: minhtml --output /dist/style.css --minify-css style.css
+
+      - name: Copy assets
+        run: cp ./assets ./dist
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
