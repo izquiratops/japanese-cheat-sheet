@@ -23,7 +23,7 @@
 body {
     text-rendering: optimizeLegibility;
     font-family: Open Sans, sans-serif;
-    line-height: 1.5rem;
+    line-height: 1.5;
 
     /* Theme */
     color: var(--font-color);
@@ -62,7 +62,8 @@ table {
     position: relative;
     width: 100%;
     margin-inline: auto;
-    margin-block: 0px var(--spacing-2-extra-large);
+    margin-block-end: var(--spacing-large);
+    line-height: 1.8;
     border-collapse: collapse;
     border-radius: var(--border-radius);
     outline: 1px solid var(--theme-color-1);
@@ -157,8 +158,7 @@ hr {
 }
 
 .checkbox__wrapper {
-    float: inline-end;
-    margin: var(--spacing-small);
+    margin: var(--spacing-medium);
 }
 
 .icon__button {
