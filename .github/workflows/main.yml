@@ -24,13 +24,13 @@ jobs:
         run: cargo install minhtml
 
       - name: Minify HTML
-        run: minhtml --output /dist/index.html --minify-js index.html
+        run: minhtml --output ./dist/index.html --minify-js index.html
 
       - name: Minify CSS
-        run: minhtml --output /dist/style.css --minify-css style.css
+        run: minhtml --output ./dist/style.css --minify-css style.css
 
       - name: Copy assets
-        run: cp -r ./assets ./dist
+        run: cp -r ./assets ./dist/assets
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
