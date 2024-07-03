@@ -16,6 +16,6 @@ dev:
 
 # Clear the dist directory
 clean:
-	rm -rf $(DIST)/*
+	find $(DIST) -mindepth 1 ! -name 'index.html' -exec rm -rf {} +
 
 .PHONY: build dev clean
