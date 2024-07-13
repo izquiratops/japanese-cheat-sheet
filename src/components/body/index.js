@@ -7,5 +7,3 @@ export default class Body extends HTMLElement {
     this.shadowRoot.innerHTML = componentHtml;
   }
 }
-
-customElements.define('custom-body', Body);

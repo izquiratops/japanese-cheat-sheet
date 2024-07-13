@@ -1,7 +1,543 @@
-<style>
-    p {
-      color: red;
-    }
+<style type="text/css">
+  @import "../../main.css"
 </style>
+<div class="page__content">
+  <h1 class="page__title centered__text">Japanese Cheat Sheet</h1>
+  <blockquote class="legend" id="legend">
+    <a class="icon__button toggle" onclick="toggleExpandLegend()" title="Toggle legend" tabindex="-1">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+        <path d="M4 12H20M12 4V20" stroke="#874356" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </a>
+    <strong>Symbols</strong>
+    <div class="columns__container">
+      <ul>
+        <div class="legend__symbol">❇️</div>
+        <span>"Noun-able" form (a form that can be nominalized with こと or の)</span>
+        <br>
+        <div class="legend__symbol">⬇️</div>
+        <span>Considered inappropriate when addressing superiors.</span>
+        <br>
+        <div class="legend__symbol">1️⃣</div>
+        <span>ないです is interchangable with ありません (the later is slightly more formal)</span>
+        <br>
+      </ul>
+    </div>
+  </blockquote>
 
-<p>Hello, World!</p>
+  <h2 id="table-of-contents">Table of contents</h2>
+  <div class="columns__container">
+    <section>
+      <strong>Verbs</strong>
+      <ul class="table__of__contents">
+        <li>
+          <a href="#conjugations">Conjugations</a>
+        </li>
+        <li>
+          <a href="#polite-verbs">Polite Verbs</a>
+        </li>
+        <li>
+          <a href="#informal-verbs">Informal Verbs</a>
+        </li>
+        <li>
+          <a href="#verb-usages" class="disabled" tabindex="-1">Verb usages</a>
+        </li>
+      </ul>
+      <strong>Syllabary</strong>
+      <ul class="table__of__contents">
+        <li>
+          <a href="#hiragana" class="disabled" tabindex="-1">Hiragana あ</a>
+        </li>
+        <li>
+          <a href="#verb-usages" class="disabled" tabindex="-1">Katakana ア</a>
+        </li>
+      </ul>
+      <strong>Kanji</strong>
+      <ul class="table__of__contents">
+        <li>
+          <a href="#kanji-anki-deck">Kanji Anki deck</a>
+        </li>
+        <li>
+          <a href="#jlpt-n5" class="disabled" tabindex="-1">List of JLPT N5</a>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <strong>Conjugations</strong>
+      <ul class="table__of__contents">
+        <li>
+          <a href="#conjugating-verbs" class="disabled" tabindex="-1">Conjugating Verbs</a>
+        </li>
+        <li>
+          <a href="#forms-of-to-be" class="disabled" tabindex="-1">Forms of である</a>
+        </li>
+        <li>
+          <a href="#adjective-conjugation" class="disabled" tabindex="-1">Adjective Conjugation</a>
+        </li>
+      </ul>
+      <strong>Particles</strong>
+      <ul class="table__of__contents">
+        <li>
+          <a href="#particle-ha" class="disabled" tabindex="-1">Topic marker は (HA)</a>
+        </li>
+        <li>
+          <a href="#particle-ga" class="disabled" tabindex="-1">Subject marker が (GA)</a>
+        </li>
+        <li>
+          <a href="#particle-wo" class="disabled" tabindex="-1">Object marker を (WO)</a>
+        </li>
+        <li>
+          <a href="#particle-ni" class="disabled" tabindex="-1">The "Aiming" particle に (NI)</a>
+        </li>
+        <li>
+          <a href="#particle-to" class="disabled" tabindex="-1">The "Glue" particle と (TO)</a>
+        </li>
+        <li>
+          <a href="#particle-de" class="disabled" tabindex="-1">The "Enabling" particle で (DE)</a>
+        </li>
+        <li>
+          <a href="#particle-mo" class="disabled" tabindex="-1">Even/Also marker も (MO)</a>
+        </li>
+        <li>
+          <a href="#particle-ka" class="disabled" tabindex="-1">Question Marker か (KA)</a>
+        </li>
+        <li>
+          <a href="#particle-he" class="disabled" tabindex="-1">Destination Marker へ (HE)</a>
+        </li>
+        <li>
+          <a href="#particle-no" class="disabled" tabindex="-1">Possession Marker の (NO)</a>
+        </li>
+        <li>
+          <a href="#particle-ya" class="disabled" tabindex="-1">Incomplete "and" group や (YA)</a>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <strong>Comparison Particles</strong>
+      <ul class="table__of__contents">
+        <li>
+          <a href="#particle-yori" class="disabled" tabindex="-1">より (YORI)</a>
+        </li>
+        <li>
+          <a href="#particle-hodo" class="disabled" tabindex="-1">ほど (HODO)</a>
+        </li>
+        <li>
+          <a href="#particle-dake" class="disabled" tabindex="-1">だけ (DAKE)</a>
+        </li>
+        <li>
+          <a href="#particle-kurai" class="disabled" tabindex="-1">くらい (KURAI)</a>
+        </li>
+        <li>
+          <a href="#particle-bakari" class="disabled" tabindex="-1">ばかり (BAKARI)</a>
+        </li>
+        <li>
+          <a href="#particle-demo" class="disabled" tabindex="-1">でも (DEMO)</a>
+        </li>
+        <li>
+          <a href="#particle-shika" class="disabled" tabindex="-1">しか (SHIKA)</a>
+        </li>
+      </ul>
+      <strong>Other Particles</strong>
+      <ul class="table__of__contents">
+        <li>
+          <a href="#particle-kara" class="disabled" tabindex="-1">From/Because から (KARA)</a>
+        </li>
+        <li>
+          <a href="#particle-made" class="disabled" tabindex="-1">Until/To まで (MADE)</a>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <h2 id="conjugations">Conjugations</h2>
+  <div class="columns__container">
+    <section>
+      <h3>Godan & Ichidan</h3>
+      <table class="centered__text">
+        <thead>
+          <tr>
+            <th>Ending</th>
+            <th>U-verb</th>
+            <th>Ru-verb</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>～あ</code></td>
+            <td>はな<strong>さ</strong></td>
+            <td>たべ<strong>✕</strong></td>
+          </tr>
+          <tr>
+            <td><code>～い</code></td>
+            <td>はな<strong>し</strong></td>
+            <td>たべ<strong>✕</strong></td>
+          </tr>
+          <tr>
+            <td><code>～う</code></td>
+            <td>はな<strong>す</strong></td>
+            <td>たべ<strong>る</strong></td>
+          </tr>
+          <tr>
+            <td><code>～え</code></td>
+            <td>はな<strong>せ</strong></td>
+            <td>たべ<strong>れ</strong></td>
+          </tr>
+          <tr>
+            <td><code>～おう</code></td>
+            <td>はな<strong>そう</strong></td>
+            <td>たべ<strong>よう</strong></td>
+          </tr>
+          <tr>
+            <td><code>～て</code></td>
+            <td></td>
+            <td>たべ<strong>て</strong></td>
+          </tr>
+          <tr>
+            <td><code>～た</code></td>
+            <td></td>
+            <td>たべ<strong>た</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <h3>する & くる</h3>
+      <table class="centered__text">
+        <thead>
+          <tr>
+            <th>Ending</th>
+            <th>する</th>
+            <th>くる</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>～あ</code></td>
+            <td>し</td>
+            <td>こ</td>
+          </tr>
+          <tr>
+            <td><code>～い</code></td>
+            <td>し</td>
+            <td>き</td>
+          </tr>
+          <tr>
+            <td><code>～う</code></td>
+            <td>す<strong>る</strong></td>
+            <td>く<strong>る</strong></td>
+          </tr>
+          <tr>
+            <td><code>～え</code></td>
+            <td>す<strong>れ</strong></td>
+            <td>く<strong>れ</strong></td>
+          </tr>
+          <tr>
+            <td><code>～おう</code></td>
+            <td>し<strong>よう</strong></td>
+            <td>こ<strong>よう</strong></td>
+          </tr>
+          <tr>
+            <td><code>～て</code></td>
+            <td>し<strong>て</strong></td>
+            <td>き<strong>て</strong></td>
+          </tr>
+          <tr>
+            <td><code>～た</code></td>
+            <td>し<strong>た</strong></td>
+            <td>き<strong>た</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <h3>て & た endings</h3>
+      <table class="centered__text">
+        <thead>
+          <tr>
+            <th>Dictionary</th>
+            <th>て</th>
+            <th>た</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>う、つ、る</td>
+            <td>って</td>
+            <td>った</td>
+          </tr>
+          <tr>
+            <td>む、ぶ、ぬ</td>
+            <td>んで</td>
+            <td>んだ</td>
+          </tr>
+          <tr>
+            <td>く</td>
+            <td>いて</td>
+            <td>いた</td>
+          </tr>
+          <tr>
+            <td>ぐ</td>
+            <td>いで</td>
+            <td>いだ</td>
+          </tr>
+          <tr>
+            <td>す</td>
+            <td>して</td>
+            <td>した</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+  <small class="">
+    Exceptions:<br>
+    <ul>
+      <li>いく (to go) in て/た form becomes いって/いった</li>
+      <li>The <code>～あ</code> ending for verbs in う is わ</li>
+    </ul>
+  </small>
+
+  <h2 id="polite-verbs">Polite Verbs</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Tense name</th>
+        <th>Form</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Present/Future</td>
+        <td><code>～い</code>＋ます</td>
+      </tr>
+      <tr>
+        <td>Past</td>
+        <td><code>～い</code>＋ました</td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            Progressive
+          </span>
+          <a href="https://guidetojapanese.org/learn/complete/progressive_tense" target="_blank"
+            rel="noopener noreferrer"><small>Tae Kim 🔗</small></a>
+        </td>
+        <td><code>~て</code>＋います</td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            Negative present/future
+          </span>
+          <a href="https://guidetojapanese.org/learn/complete/polite_negative" target="_blank"
+            rel="noopener noreferrer"><small>Tae Kim 🔗</small></a>
+        </td>
+        <td><code>～い</code>＋ません</td>
+      </tr>
+      <tr>
+        <td>Negative past</td>
+        <td><code>～い</code>＋ませんでした</td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            Command
+          </span>
+          <a href="https://guidetojapanese.org/learn/complete/command" target="_blank"
+            rel="noopener noreferrer"><small>Tae Kim 🔗</small></a>
+        </td>
+        <td>
+          <code>～て</code>＋ください<br>
+          <code>～い</code>＋なさい ⬇️
+        </td>
+      </tr>
+      <tr>
+        <td>Negative command</td>
+        <td><code>～あ</code>＋ないでください</td>
+      </tr>
+      <tr>
+        <td>Potential <small>can/able to</small></td>
+        <td>
+          Godan <code>~う</code>＋ます<br>
+          Ichidan <code>~る</code>＋られます<br>
+          する → できます、
+          くる → こられます
+        </td>
+      </tr>
+      <tr>
+        <td>Want to</td>
+        <td><code>～い</code>＋たいです</td>
+      </tr>
+      <tr>
+        <td>Don't want to 1️⃣</td>
+        <td><code>～い</code>＋たくないです</td>
+      </tr>
+      <tr>
+        <td>
+          Let's do<br>
+          Shall we...
+        </td>
+        <td>
+          <code>～い</code>＋ましょう<br>
+          <code>～い</code>＋ましょう
+        </td>
+      </tr>
+      <tr>
+        <td>Passive <small>to be ~ed</small></td>
+        <td>
+          Godan <code>~あ</code>＋れます<br>
+          Ichidan <code>~あ</code>＋られます<br>
+          する → されます、
+          くる → こられます
+        </td>
+      </tr>
+      <tr>
+        <td>Causative <small>to allow, force someone to ~</small></td>
+        <td>
+          Godan <code>~あ</code>＋せます<br>
+          Ichidan <code>~あ</code>＋させます<br>
+          する → させます、
+          くる → こさせます
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="checkbox__wrapper">
+    <input type="checkbox" name="polite-examples" checked disabled />
+    <label for="polite-examples">Show examples</label>
+  </div>
+
+  <h2 id="informal-verbs">Informal Verbs</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Tense name</th>
+        <th>Form</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Present/Future ❇️</td>
+        <td><code>～う</code></td>
+      </tr>
+      <tr>
+        <td>
+          <span>
+            Past
+          </span>
+          <a href="https://guidetojapanese.org/learn/complete/verb_past" target="_blank"
+            rel="noopener noreferrer"><small>Tae Kim 🔗</small></a> ❇️
+        </td>
+        <td><code>～た</code></td>
+      </tr>
+      <tr>
+        <td>Progressive ❇️</td>
+        <td><code>~て</code>＋いる</td>
+      </tr>
+      <tr>
+        <td>Negative present/future ❇️</td>
+        <td><code>～あ</code>＋ない</td>
+      </tr>
+      <tr>
+        <td>Negative past ❇️</td>
+        <td><code>～あ</code>＋なかった</td>
+      </tr>
+      <tr>
+        <td>Command</td>
+        <td>
+          <code>～て</code><br>
+          <hr>
+          Godan <code>～え</code><br>
+          Ichidan <code>～い</code>＋ろ<br>
+          する → しろ、
+          くる → こい <small>Considered rude</small>
+        </td>
+      </tr>
+      <tr>
+        <td>Negative command</td>
+        <td>
+          <code>～あ</code>＋ないで<br>
+          <code>～う</code>＋な <small>Considered rude</small>
+        </td>
+      </tr>
+      <tr>
+        <td>Potential <small>can/able to</small> ❇️</td>
+        <td>
+          Godan <code>~え</code>＋る<br>
+          Ichidan <code>~あ</code>＋られる<br>
+          する → できる、
+          くる → これる
+        </td>
+      </tr>
+      <tr>
+        <td>Want to</td>
+        <td><code>～い</code>＋たい</td>
+      </tr>
+      <tr>
+        <td>Don't want to</td>
+        <td><code>～い</code>＋たくない</td>
+      </tr>
+      <tr>
+        <td>
+          Let's do<br>
+          Shall we...
+        </td>
+        <td>
+          <code>~おう</code><br>
+          <code>~おう</code>＋か<br>
+        </td>
+      </tr>
+      <tr>
+        <td>Passive <small>to be ~ed</small> ❇️</td>
+        <td>
+          Godan <code>~あ</code>＋れる<br>
+          Ichidan <code>~あ</code>＋られる<br>
+          する → される、
+          くる → こられる
+        </td>
+      </tr>
+      <tr>
+        <td>Causative <small>to allow, force someone to ~</small> ❇️</td>
+        <td>
+          Godan <code>~あ</code>＋せる<br>
+          Ichidan <code>~あ</code>＋させる<br>
+          する → させる、
+          くる → こさせる
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="checkbox__wrapper">
+    <input type="checkbox" name="polite-examples" checked disabled />
+    <label for="polite-examples">Show examples</label>
+  </div>
+
+  <h2>Kanji 漢字</h2>
+  <h3 id="kanji-anki-deck">My Anki deck 💾</h3>
+  <p>At the moment, I am utilizing the Basic Kanji Book (Vol. 1) to initiate with the most basic ones. After
+    finishing a lesson, I will add all the vocabulary found there. From time to time, this page will receive a
+    new updated version.</p>
+  The .apkg file is hosted in the same repository as this site, you can <a href="./assets/basic-kanji-book-vol1.apkg"
+    download>download it from here</a>.
+  <p class="footer centered__text">
+    <small>The process of creating this site involved listening to a lot of silly playlists and Persona
+      soundtracks.
+      <a href="https://x.com/hamboorglar" target="_blank" rel="noopener noreferrer">Jordi</a>
+    </small>
+  </p>
+</div>
+<a href="https://github.com/izquiratops/japanese-cheat-sheet" target="_blank" rel="noopener noreferrer"
+  title="Fork me on Github!" tabindex="-1">
+  <img src="./assets/github-mark.svg" class="github__logo" alt="Github logo">
+</a>
+<a class="icon__button jump" onclick="scrollToTop()" title="Scroll to the top 🦘" tabindex="-1">
+  <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 330 330">
+    <g>
+      <path
+        d="M100.606,100.606L150,51.212V315c0,8.284,6.716,15,15,15c8.284,0,15-6.716,15-15V51.212l49.394,49.394 C232.322,103.535,236.161,105,240,105c3.839,0,7.678-1.465,10.606-4.394c5.858-5.857,5.858-15.355,0-21.213l-75-75 c-5.857-5.858-15.355-5.858-21.213,0l-75,75c-5.858,5.857-5.858,15.355,0,21.213C85.251,106.463,94.749,106.463,100.606,100.606z">
+      </path>
+    </g>
+  </svg>
+</a>

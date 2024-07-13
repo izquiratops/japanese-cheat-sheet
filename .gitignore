@@ -1,4 +1,3 @@
 .DS_Store
-dist
-
-!dist/index.html
+dev
+dist/**/* !dist/index.html
