@@ -1,5 +1,6 @@
-import mainHtml from './main.html';
-import './style.css';
+import './global.css';
 import './components';
 
-document.getElementById('app').innerHTML = mainHtml;
+document.getElementById('bundle-anchor').innerHTML = `
+    <site-body></site-body>
+`;

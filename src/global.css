@@ -1,0 +1,21 @@
+:root {
+    /* Spacing */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+    --spacing-extra-large: 32px;
+    --spacing-2-extra-large: 48px;
+
+    /* Other values */
+    --icon-size: 32px;
+    --border-radius: 4px;
+
+    /* Theme by default, but it's randomly applied on load */
+    --toc-link-color: #4183c4;
+    --theme-color-1: #874356;
+    --theme-color-2: #F68989;
+    --theme-color-3: #C65D7B;
+    --theme-color-4: #F6E7D8;
+    --font-color: #000;
+    --contrast-font-color: #FFF;
+}
