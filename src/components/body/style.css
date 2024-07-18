@@ -1,18 +1,3 @@
-body {
-    text-rendering: optimizeLegibility;
-    font-family: Open Sans, sans-serif;
-    line-height: 1.5;
-
-    /* Theme */
-    color: var(--font-color);
-    background: var(--theme-color-4);
-}
-
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
 h3 {
     margin: 0px 0px 12px 0px;
 }

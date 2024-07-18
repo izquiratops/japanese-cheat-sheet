@@ -19,3 +19,18 @@
     --font-color: #000;
     --contrast-font-color: #FFF;
 }
+
+body {
+    text-rendering: optimizeLegibility;
+    font-family: Open Sans, sans-serif;
+    line-height: 1.5;
+
+    /* Theme */
+    color: var(--font-color);
+    background: var(--theme-color-4);
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}

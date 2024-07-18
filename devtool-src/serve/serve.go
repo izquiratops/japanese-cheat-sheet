@@ -12,14 +12,14 @@ func Run() {
 	buildOptions := api.BuildOptions{
 		EntryPoints:       []string{"src/main.js"},
 		Bundle:            true,
-		MinifyWhitespace:  true,
-		MinifyIdentifiers: true,
-		MinifySyntax:      true,
-		Outfile:           "dist/bundle.js",
+		MinifyWhitespace:  false,
+		MinifyIdentifiers: false,
+		MinifySyntax:      false,
+		Outdir:            "dist",
 		Write:             true,
 		Loader: map[string]api.Loader{
 			".html": api.LoaderText,
-			".css":  api.LoaderCSS,
+			".css":  api.LoaderText,
 		},
 	}
 
