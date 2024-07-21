@@ -19,7 +19,7 @@ func loadAndMinify(m *minify.M, distDirPath, fileType string) func(args api.OnLo
 		srcFilePath := filepath.Clean(args.Path)
 		srcDirPath := filepath.Dir(args.Path)
 
-		fmt.Printf("bundling file: %s\n", srcFilePath)
+		fmt.Printf("handling file: %s\n", srcFilePath)
 		content, err := os.ReadFile(srcFilePath)
 		if err != nil {
 			return api.OnLoadResult{}, err
@@ -53,6 +53,7 @@ func Build(entryFilePath, distDirPath string, enableMinify bool) {
 	result := api.Build(api.BuildOptions{
 		EntryPoints:       []string{entryFilePath},
 		Bundle:            true,
+		Metafile:          true,
 		MinifyWhitespace:  enableMinify,
 		MinifyIdentifiers: enableMinify,
 		MinifySyntax:      enableMinify,
@@ -83,6 +84,8 @@ func Build(entryFilePath, distDirPath string, enableMinify bool) {
 	if len(result.Errors) > 0 {
 		log.Fatal(result.Errors)
 	}
+
+	fmt.Printf("build successfully done\n%s", result.Metafile)
 }
 
 func Serve(entryFilePath, distDirPath string, enableMinify bool) error {
