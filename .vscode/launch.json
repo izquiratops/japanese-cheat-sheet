@@ -9,8 +9,8 @@
             "program": "devtool-src/main.go",
             "env": {},
             "args": [
-                "build",
-                "--src", "../src/main.js",
+                "serve",
+                "--entry", "../src/main.js",
                 "--dist", "../dist"
             ]
         }
