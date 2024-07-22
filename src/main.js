@@ -6,7 +6,7 @@ import './components';
 
 StyleSheetUtils.adopt(document, globalCss);
 
-document.getElementById('bundle-anchor').innerHTML = `
+document.getElementById('body-anchor').innerHTML = `
     <site-body></site-body>
 `;
 

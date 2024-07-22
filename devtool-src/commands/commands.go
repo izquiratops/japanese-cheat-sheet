@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"slices"
 
 	"github.com/evanw/esbuild/pkg/api"
 	"github.com/tdewolff/minify/v2"
@@ -157,6 +158,8 @@ func Serve(entryFilePath, distDirPath string, enableMinify bool) error {
 }
 
 func Clean(distDirPath string) {
+	whitelist := []string{"index.html", "favicon.ico"}
+
 	// Check if dist directory exists
 	if _, err := os.Stat(distDirPath); os.IsNotExist(err) {
 		message := fmt.Sprintf("directory %s does not exist.\n", distDirPath)
@@ -169,8 +172,8 @@ func Clean(distDirPath string) {
 			return err
 		}
 
-		// Skip the dist directory itself and index.html
-		if path == distDirPath || info.Name() == "index.html" {
+		// Skip the dist directory itself and whitelisted files like index.html
+		if path == distDirPath || slices.Contains(whitelist, info.Name()) {
 			return nil
 		}
 

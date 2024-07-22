@@ -39,8 +39,9 @@ func HandleHtmlFile(htmlBytes []byte, srcDirPath, distDirPath string) ([]byte, e
 		return nil, fmt.Errorf("error parsing HTML: %w", err)
 	}
 
-	var replaceSVG func(*html.Node) error
-	replaceSVG = func(n *html.Node) error {
+	var replaceAsset func(*html.Node) error
+	replaceAsset = func(n *html.Node) error {
+		// Handle SVG
 		if n.Type == html.ElementNode && n.Data == "img" {
 			for i, attr := range n.Attr {
 				if attr.Key == "src" && bytes.HasSuffix([]byte(attr.Val), []byte(".svg")) {
@@ -69,7 +70,7 @@ func HandleHtmlFile(htmlBytes []byte, srcDirPath, distDirPath string) ([]byte, e
 		}
 
 		for c := n.FirstChild; c != nil; c = c.NextSibling {
-			if err := replaceSVG(c); err != nil {
+			if err := replaceAsset(c); err != nil {
 				return err
 			}
 		}
@@ -77,7 +78,7 @@ func HandleHtmlFile(htmlBytes []byte, srcDirPath, distDirPath string) ([]byte, e
 		return nil
 	}
 
-	replaceSVG(document)
+	replaceAsset(document)
 
 	var buf bytes.Buffer
 	err = html.Render(&buf, document)
