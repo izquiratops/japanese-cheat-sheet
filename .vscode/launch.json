@@ -11,7 +11,8 @@
             "args": [
                 "build",
                 "--entry", "../src/main.js",
-                "--dist", "../dist"
+                "--dist", "../dist",
+                "--minify", "true"
             ]
         },
         {
@@ -24,7 +25,8 @@
             "args": [
                 "serve",
                 "--entry", "../src/main.js",
-                "--dist", "../dist"
+                "--dist", "../dist",
+                "--minify", "true"
             ]
         },
         {

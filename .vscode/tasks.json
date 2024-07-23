@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "go",
+			"label": "Build package",
+			"command": "build",
+			"options": {
+            	"cwd": "${workspaceFolder}/devtool-src",
+			},
+			"args": [
+				"-o",
+				"../devtool",
+			],
+			"problemMatcher": [
+				"$go"
+			],
+			"group": "build",
+			"detail": "go build"
+		}
+	]
+}

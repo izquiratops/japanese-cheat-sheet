@@ -5,41 +5,24 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"strconv"
 
 	"esbuild-tool/commands"
 )
 
 type CommonFlags struct {
-	Dist string
+	Entry  string
+	Dist   string
+	Minify bool
 }
 
 func defineCommonFlags(fs *flag.FlagSet) *CommonFlags {
 	cf := &CommonFlags{}
+
+	fs.StringVar(&cf.Entry, "entry", "src/main.js", "Path to the entry point")
 	fs.StringVar(&cf.Dist, "dist", "dist/", "Path to the distribution directory")
-	fs.StringVar(&cf.Dist, "d", "dist/", "Path to the distribution directory (shorthand)")
+	fs.BoolVar(&cf.Minify, "minify", false, "Enable JavaScript minification")
 
 	return cf
-}
-
-type BundleFlags struct {
-	CommonFlags
-	Entry  string
-	Minify string
-}
-
-func defineBundleCommonFlags(fs *flag.FlagSet) *BundleFlags {
-	bcf := &BundleFlags{}
-
-	cf := defineCommonFlags(fs)
-	bcf.Dist = cf.Dist
-
-	fs.StringVar(&bcf.Entry, "entry", "src/main.js", "Path to the entry point")
-	fs.StringVar(&bcf.Entry, "e", "src/main.js", "Path to the entry point (shorthand)")
-	fs.StringVar(&bcf.Minify, "minify", "false", "Enable JavaScript minification")
-	fs.StringVar(&bcf.Minify, "m", "false", "Enable JavaScript minification (shorthand)")
-
-	return bcf
 }
 
 func printHelp() {
@@ -57,10 +40,10 @@ func printHelp() {
 
 func main() {
 	buildCmd := flag.NewFlagSet("build", flag.ExitOnError)
-	buildFlags := defineBundleCommonFlags(buildCmd)
+	buildFlags := defineCommonFlags(buildCmd)
 
 	serveCmd := flag.NewFlagSet("serve", flag.ExitOnError)
-	serveFlags := defineBundleCommonFlags(serveCmd)
+	serveFlags := defineCommonFlags(serveCmd)
 
 	cleanCmd := flag.NewFlagSet("clean", flag.ExitOnError)
 	cleanFlags := defineCommonFlags(cleanCmd)
@@ -68,18 +51,10 @@ func main() {
 	switch os.Args[1] {
 	case "build":
 		buildCmd.Parse(os.Args[2:])
-		enableMinify, err := strconv.ParseBool(buildFlags.Minify)
-		if err != nil {
-			log.Fatal("--minify argument is not recognized")
-		}
-		commands.Build(buildFlags.Entry, buildFlags.Dist, enableMinify)
+		commands.Build(buildFlags.Entry, buildFlags.Dist, buildFlags.Minify)
 	case "serve":
 		serveCmd.Parse(os.Args[2:])
-		enableMinify, err := strconv.ParseBool(buildFlags.Minify)
-		if err != nil {
-			log.Fatal("--minify argument is not recognized")
-		}
-		commands.Serve(serveFlags.Entry, serveFlags.Dist, enableMinify)
+		commands.Serve(serveFlags.Entry, serveFlags.Dist, serveFlags.Minify)
 	case "clean":
 		cleanCmd.Parse(os.Args[2:])
 		commands.Clean(cleanFlags.Dist)
