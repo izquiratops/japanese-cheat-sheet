@@ -1,6 +1,7 @@
 import componentHtml from './index.html';
 import styleCss from './style.css';
-import { StyleSheetUtils } from '../../utils/style-sheet.js';
+import sharedCss from '../shared.css';
+import { StyleSheetUtils } from '../../utils/stylesheet.js';
 
 export default class Body extends HTMLElement {
   legendContainerElement = undefined;
@@ -12,6 +13,7 @@ export default class Body extends HTMLElement {
     this.shadowRoot.innerHTML = componentHtml;
 
     StyleSheetUtils.adopt(this.shadowRoot, styleCss);
+    StyleSheetUtils.adopt(this.shadowRoot, sharedCss);
 
     addEventListener("load", () => {
       this.legendContainerElement = this.shadowRoot.getElementById('legend');

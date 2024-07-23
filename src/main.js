@@ -1,5 +1,5 @@
 import globalCss from './global.css';
-import { StyleSheetUtils } from './utils/style-sheet.js';
+import { StyleSheetUtils } from './utils/stylesheet.js';
 
 // Import components to be included in the bundle
 import './components';
@@ -11,6 +11,8 @@ document.getElementById('body-anchor').innerHTML = `
 `;
 
 addEventListener("load", () => {
+    console.debug('theme index', StyleSheetUtils.themeIndex);
+
     document.documentElement.style.setProperty(
         "--theme-color-1",
         StyleSheetUtils.theme[0]

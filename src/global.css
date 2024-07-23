@@ -24,8 +24,6 @@ body {
     text-rendering: optimizeLegibility;
     font-family: Open Sans, sans-serif;
     line-height: 1.5;
-
-    /* Theme */
     color: var(--font-color);
     background: var(--theme-color-4);
 }
@@ -33,8 +31,4 @@ body {
 body, html {
     height: 100%;
     margin: 0;
-}
-
-.hidden {
-    display: none;
 }
