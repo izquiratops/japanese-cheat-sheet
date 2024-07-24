@@ -5,7 +5,6 @@ import (
 	"log"
 	"os"
 	"path/filepath"
-	"slices"
 
 	"github.com/evanw/esbuild/pkg/api"
 	"github.com/tdewolff/minify/v2"
@@ -13,6 +12,7 @@ import (
 	"github.com/tdewolff/minify/v2/html"
 
 	"esbuild-tool/assets"
+	"esbuild-tool/utils"
 )
 
 func loadAndMinify(m *minify.M, distDirPath, fileType string) func(args api.OnLoadArgs) (api.OnLoadResult, error) {
@@ -43,40 +43,6 @@ func loadAndMinify(m *minify.M, distDirPath, fileType string) func(args api.OnLo
 			Contents: &minified,
 			Loader:   api.LoaderText,
 		}, nil
-	}
-}
-
-func clearFolder(distDirPath string) {
-	whitelist := []string{"index.html", "favicon.ico"}
-
-	// Check if dist directory exists
-	if _, err := os.Stat(distDirPath); os.IsNotExist(err) {
-		message := fmt.Sprintf("directory %s does not exist.\n", distDirPath)
-		log.Fatal(message)
-	}
-
-	// Walk through the dist directory
-	err := filepath.Walk(distDirPath, func(path string, info os.FileInfo, err error) error {
-		if err != nil {
-			return err
-		}
-
-		// Skip the dist directory itself and whitelisted files like index.html
-		if path == distDirPath || slices.Contains(whitelist, info.Name()) {
-			return nil
-		}
-
-		// Remove file or directory
-		if err := os.RemoveAll(path); err != nil {
-			return fmt.Errorf("failed to remove %s: %v", path, err)
-		}
-
-		fmt.Printf("removed: %s\n", path)
-		return nil
-	})
-
-	if err != nil {
-		log.Fatal("error cleaning directory:", err)
 	}
 }
 
@@ -192,7 +158,7 @@ func Serve(entryFilePath, distDirPath string, enableMinify bool) error {
 }
 
 func Clean(distDirPath string) {
-	clearFolder(distDirPath)
+	utils.Clean(distDirPath)
 
 	fmt.Println("clean completed successfully.")
 }
