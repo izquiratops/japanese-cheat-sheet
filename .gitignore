@@ -3,3 +3,4 @@ devtool
 dist/**/*
 !dist/index.html
 !dist/favicon.ico
+*.exe

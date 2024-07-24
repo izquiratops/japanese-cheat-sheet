@@ -9,8 +9,9 @@
     /* Other values */
     --icon-size: 32px;
     --border-radius: 4px;
+    --line-height: 1.8;
 
-    /* Theme by default, but it's randomly applied on load */
+    /* Theme by default, it's applied if JavaScript is disabled */
     --toc-link-color: #4183c4;
     --theme-color-1: #874356;
     --theme-color-2: #F68989;

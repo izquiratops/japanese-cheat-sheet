@@ -1,9 +1,8 @@
 import componentHtml from './index.html';
-import styleCss from './style.css';
 import sharedCss from '../shared.css';
-import { StyleSheetUtils } from '../../utils/stylesheet.js';
+import { StyleSheetUtils } from '../../utils/stylesheet';
 
-export default class Body extends HTMLElement {
+export class Body extends HTMLElement {
   legendContainerElement = undefined;
   legendIconElements = undefined;
 
@@ -12,7 +11,7 @@ export default class Body extends HTMLElement {
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.innerHTML = componentHtml;
 
-    StyleSheetUtils.adopt(this.shadowRoot, styleCss);
+    // StyleSheetUtils.adopt(this.shadowRoot, styleCss);
     StyleSheetUtils.adopt(this.shadowRoot, sharedCss);
 
     addEventListener("load", () => {

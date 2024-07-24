@@ -2,7 +2,7 @@ import componentHtml from './index.html';
 import sharedCss from '../shared.css';
 import { StyleSheetUtils } from '../../utils/stylesheet';
 
-export class Toc extends HTMLElement {
+export class InformalVerbs extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
