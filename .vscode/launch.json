@@ -13,7 +13,8 @@
                 "--entry", "../src/main.js",
                 "--dist", "../dist",
                 "--minify", "true"
-            ]
+            ],
+            "dlvFlags": ["--check-go-version=false"]
         },
         {
             "name": "Run Serve",
@@ -27,7 +28,8 @@
                 "--entry", "../src/main.js",
                 "--dist", "../dist",
                 "--minify", "true"
-            ]
+            ],
+            "dlvFlags": ["--check-go-version=false"]
         },
         {
             "name": "Run Clean",
@@ -39,7 +41,8 @@
             "args": [
                 "clean",
                 "--dist", "../dist"
-            ]
+            ],
+            "dlvFlags": ["--check-go-version=false"]
         },
         {
             "name": "Run Help",
@@ -50,7 +53,8 @@
             "env": {},
             "args": [
                 "help",
-            ]
+            ],
+            "dlvFlags": ["--check-go-version=false"]
         }
     ]
 }

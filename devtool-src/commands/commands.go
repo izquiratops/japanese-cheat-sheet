@@ -20,7 +20,6 @@ func loadAndMinify(m *minify.M, distDirPath, fileType string) func(args api.OnLo
 		srcFilePath := filepath.Clean(args.Path)
 		srcDirPath := filepath.Dir(args.Path)
 
-		fmt.Printf("handling file: %s\n", srcFilePath)
 		content, err := os.ReadFile(srcFilePath)
 		if err != nil {
 			return api.OnLoadResult{}, err
@@ -143,7 +142,6 @@ func Serve(entryFilePath, distDirPath string, enableMinify bool) error {
 		Servedir: distDirPath,
 		Port:     8080,
 	})
-
 	if serveErr != nil {
 		log.Fatal("failed to start server:", serveErr)
 	}
