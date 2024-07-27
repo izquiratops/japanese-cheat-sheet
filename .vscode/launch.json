@@ -27,7 +27,7 @@
                 "serve",
                 "--entry", "../src/main.js",
                 "--dist", "../dist",
-                "--minify", "true"
+                "--minify", "false"
             ],
             "dlvFlags": ["--check-go-version=false"]
         },

@@ -1,12 +1,17 @@
 import globalCss from './global.css';
 import sharedCss from './shared.css';
-import { StyleSheetUtils } from './utils/stylesheet.js';
+import { Theme } from './theme.js';
 
 // Import components to be included in the bundle
-import './components';
+import './views/index.js';
 
-StyleSheetUtils.adopt(document, globalCss);
-StyleSheetUtils.adopt(document, sharedCss);
+const globalStylesheet = new CSSStyleSheet();
+globalStylesheet.replaceSync(globalCss);
+document.adoptedStyleSheets.push(globalStylesheet);
+
+const sharedStylesheet = new CSSStyleSheet();
+sharedStylesheet.replaceSync(sharedCss);
+document.adoptedStyleSheets.push(sharedStylesheet);
 
 document.getElementById('body-anchor').innerHTML = `
     <site-body></site-body>
@@ -14,30 +19,35 @@ document.getElementById('body-anchor').innerHTML = `
 
 document.documentElement.style.setProperty(
     "--theme-color-1",
-    StyleSheetUtils.theme[0]
+    Theme.current[0]
 );
 
 document.documentElement.style.setProperty(
     "--theme-color-2",
-    StyleSheetUtils.theme[1]
+    Theme.current[1]
 );
 
 document.documentElement.style.setProperty(
     "--theme-color-3",
-    StyleSheetUtils.theme[2]
+    Theme.current[2]
 );
 
 document.documentElement.style.setProperty(
     "--theme-color-4",
-    StyleSheetUtils.theme[3]
+    Theme.current[3]
 );
 
 document.documentElement.style.setProperty(
     "--font-color",
-    StyleSheetUtils.theme[4]
+    Theme.current[4]
 );
 
 document.documentElement.style.setProperty(
     "--contrast-font-color",
-    StyleSheetUtils.theme[5]
+    Theme.current[5]
+);
+
+document.documentElement.style.setProperty(
+    "--small-font-color",
+    Theme.current[6]
 );

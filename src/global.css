@@ -1,17 +1,18 @@
 :root {
     /* Spacing */
+    --spacing-extra-small: 4px;
     --spacing-small: 8px;
     --spacing-medium: 16px;
     --spacing-large: 24px;
     --spacing-extra-large: 32px;
     --spacing-2-extra-large: 48px;
 
-    /* Other values */
+    /* Other values ✏️ */
     --icon-size: 32px;
-    --border-radius: 4px;
+    --border-radius: 2px;
     --line-height: 1.8;
 
-    /* Theme by default, it's applied if JavaScript is disabled */
+    /* Theme applied if JavaScript is disabled */
     --toc-link-color: #4183c4;
     --theme-color-1: #874356;
     --theme-color-2: #F68989;
@@ -19,6 +20,7 @@
     --theme-color-4: #F6E7D8;
     --font-color: #000;
     --contrast-font-color: #FFF;
+    --small-font-color: #444;
 }
 
 body {
