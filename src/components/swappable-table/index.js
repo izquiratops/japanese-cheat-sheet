@@ -17,7 +17,7 @@ export class SwappableTable extends HTMLElement {
     const input = this.shadowRoot.querySelector('input[type="checkbox"]')
     input.addEventListener('change', this.toggleColumn.bind(this));
     
-    const slot = this.shadowRoot.querySelector('slot');
+    const slot = this.shadowRoot.querySelector('slot[name=content]');
     slot.addEventListener('slotchange', this.updateSlottedElements.bind(this));
   }
 

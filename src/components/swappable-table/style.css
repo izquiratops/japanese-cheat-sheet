@@ -1,24 +1,14 @@
-.checkbox__wrapper {
+header {
     display: flex;
-    justify-content: flex-end;
-    margin: var(--spacing-small);
+    justify-content: space-between;
+    align-items: center;
 }
 
-slot {
+::slotted(span[slot="content"]) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
     background: var(--theme-color-2);
     border: 1px solid var(--theme-color-1);
-}
-
-::slotted(.grid-header) {
-    font-weight: bold;
-
-    color: var(--contrast-font-color);
-    background-color: var(--theme-color-1);
-}
-
-::slotted(.grid-header), ::slotted(.grid-item) {
-    padding-inline: var(--spacing-small);
-    padding-block: var(--spacing-extra-small);
+    border-radius: var(--border-radius);
 }

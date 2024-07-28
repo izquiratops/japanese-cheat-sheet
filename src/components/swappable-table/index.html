@@ -1,8 +1,11 @@
-<div class="checkbox__wrapper">
-    <label>
-        <input type="checkbox">
-        Show examples
-    </label>
-</div>
+<header>
+    <slot name="header"></slot>
+    <div>
+        <input type="checkbox" name="examples">
+        <label for="examples">
+            Show examples
+        </label>
+    </div>
+</header>
 
-<slot></slot>
+<slot name="content"></slot>

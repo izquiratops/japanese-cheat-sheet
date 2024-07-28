@@ -5,15 +5,16 @@
     --spacing-medium: 16px;
     --spacing-large: 24px;
     --spacing-extra-large: 32px;
-    --spacing-2-extra-large: 48px;
+    --spacing-exxtra-large: 48px;
+    --spacing-exxxtra-large: 64px;
 
     /* Other values ✏️ */
     --icon-size: 32px;
-    --border-radius: 2px;
-    --line-height: 1.8;
+    --border-radius: 4px;
+    --line-height: 1.6;
 
     /* Theme applied if JavaScript is disabled */
-    --toc-link-color: #4183c4;
+    --link-color: #4183c4;
     --theme-color-1: #874356;
     --theme-color-2: #F68989;
     --theme-color-3: #C65D7B;
@@ -26,12 +27,98 @@
 body {
     text-rendering: optimizeLegibility;
     font-family: Open Sans, sans-serif;
-    line-height: 1.5;
+    line-height: var(--line-height);
     color: var(--font-color);
     background: var(--theme-color-4);
 }
 
-body, html {
+body,
+html {
     height: 100%;
     margin: 0;
+}
+
+h1 {
+    padding-block: var(--spacing-large);
+}
+
+h3 {
+    margin-bottom: var(--spacing-small);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+
+    &.disabled {
+        opacity: 0.3;
+        pointer-events: none;
+    }
+}
+
+small {
+    color: var(--small-font-color);
+    font-style: italic;
+}
+
+code {
+    font-family: Open Sans,sans-serif;
+    text-wrap: nowrap;
+    padding: var(--spacing-extra-small);
+    color: var(--contrast-font-color);
+    background: var(--theme-color-1);
+    border-radius: var(--border-radius);
+}
+
+hr {
+    color: var(--theme-color-2);
+    border-color: var(--theme-color-2);
+    background-color: var(--theme-color-2);
+}
+
+site-body {
+    display: block;
+    padding-block-end: var(--spacing-exxxtra-large);
+
+    word-wrap: break-word;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-medium) var(--spacing-exxxtra-large) var(--spacing-medium);
+}
+
+/* ~~~ Mobile ~~~ */
+
+@media screen and (max-width: 600px) {
+    h1 {
+        padding: 0;
+    }
+
+    .github__logo {
+        display: none;
+    }
+}
+
+/* ~~~ Utilty ~~~ */
+
+.hidden {
+    display: none;
+}
+
+.centered__text {
+    text-align: center;
+}
+
+/* ~~~ Shared ~~~ */
+
+/* Alternative style for table headers */
+:where(.grid-header) {
+    color: var(--contrast-font-color);
+    background: var(--theme-color-1);
+    font-weight: bold;
+}
+
+/* Space for every grid cell */
+:where(.grid-header, .grid-item) {
+    padding-inline: var(--spacing-small);
+    padding-block: var(--spacing-extra-small);
 }
