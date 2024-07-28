@@ -1,5 +1,4 @@
 import globalCss from './global.css';
-import sharedCss from './shared.css';
 import { Theme } from './theme.js';
 
 // Import components to be included in the bundle
@@ -8,10 +7,6 @@ import './views/index.js';
 const globalStylesheet = new CSSStyleSheet();
 globalStylesheet.replaceSync(globalCss);
 document.adoptedStyleSheets.push(globalStylesheet);
-
-const sharedStylesheet = new CSSStyleSheet();
-sharedStylesheet.replaceSync(sharedCss);
-document.adoptedStyleSheets.push(sharedStylesheet);
 
 document.getElementById('body-anchor').innerHTML = `
     <site-body></site-body>

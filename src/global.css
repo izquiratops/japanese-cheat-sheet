@@ -11,7 +11,7 @@
     /* Other values ✏️ */
     --icon-size: 32px;
     --border-radius: 4px;
-    --line-height: 1.6;
+    --line-height: 1.8;
 
     /* Theme applied if JavaScript is disabled */
     --link-color: #4183c4;
@@ -42,8 +42,10 @@ h1 {
     padding-block: var(--spacing-large);
 }
 
-h3 {
-    margin-bottom: var(--spacing-small);
+h2,
+h3,
+h4 {
+    margin-block: var(--spacing-small);
 }
 
 a {
@@ -62,7 +64,7 @@ small {
 }
 
 code {
-    font-family: Open Sans,sans-serif;
+    font-family: Open Sans, sans-serif;
     text-wrap: nowrap;
     padding: var(--spacing-extra-small);
     color: var(--contrast-font-color);
@@ -76,6 +78,14 @@ hr {
     background-color: var(--theme-color-2);
 }
 
+table {
+    width: 100%;
+}
+
+footer {
+    line-height: var(--line-height);
+}
+
 site-body {
     display: block;
     padding-block-end: var(--spacing-exxxtra-large);
@@ -84,6 +94,28 @@ site-body {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 var(--spacing-medium) var(--spacing-exxxtra-large) var(--spacing-medium);
+}
+
+.icon {
+    cursor: pointer;
+
+    &.scroll__up {
+        position: fixed;
+        right: var(--spacing-medium);
+        bottom: var(--spacing-medium);
+    }
+
+    &.github__logo {
+        position: absolute;
+        left: var(--spacing-medium);
+        top: var(--spacing-medium);
+        transform: rotate(-10deg);
+    }
+
+    img {
+        width: var(--icon-size);
+        height: var(--icon-size);
+    }
 }
 
 /* ~~~ Mobile ~~~ */
@@ -104,21 +136,39 @@ site-body {
     display: none;
 }
 
+.clear__background {
+    background: none;
+}
+
 .centered__text {
     text-align: center;
+}
+
+/* ~~~ Layout ~~~ */
+
+.flex__row__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--spacing-small);
+}
+
+.responsive__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    column-gap: var(--spacing-medium);
 }
 
 /* ~~~ Shared ~~~ */
 
 /* Alternative style for table headers */
-:where(.grid-header) {
+:where(.grid__header) {
     color: var(--contrast-font-color);
     background: var(--theme-color-1);
     font-weight: bold;
 }
 
 /* Space for every grid cell */
-:where(.grid-header, .grid-item) {
+:where(.grid__header, .grid__item) {
     padding-inline: var(--spacing-small);
     padding-block: var(--spacing-extra-small);
 }

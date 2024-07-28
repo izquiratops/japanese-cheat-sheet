@@ -1,7 +1,7 @@
 import indexHtml from './index.html'
 import styleCss from './style.css'
 
-export class SwappableTable extends HTMLElement {
+export class TableWithExamples extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
@@ -24,7 +24,7 @@ export class SwappableTable extends HTMLElement {
   updateSlottedElements() {
     // Set column-b hidden by default
     this.querySelectorAll('.column-b').forEach(elem => elem.classList.toggle('hidden', true))
-    this.slottedElements = this.querySelectorAll('.grid-item, .grid-header');
+    this.slottedElements = this.querySelectorAll('.grid__item, .grid__header');
   }
 
   toggleColumn(event) {

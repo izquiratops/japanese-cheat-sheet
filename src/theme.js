@@ -7,9 +7,11 @@ export class Theme {
         [  '#99BC85', '#BFD8AF', '#D4E7C5', '#E1F0DA',  '#000', '#000', '#444'], // Matcha
         [  '#FF7D29', '#FFBF78', '#FFEEA9', '#FEFFD2',  '#000', '#FFF', '#444'], // 100%OrangeJuice
         [  '#FF9494', '#FFD1D1', '#FFE3E1', '#FFF5E4',  '#000', '#000', '#444'], // いちご🍓
-        [  '#5F85DB', '#353941', '#353941', '#26282B',  '#FFF', '#FFF', '#BFCEF0'], // Dark
+        [  '#5F85DB', '#353941', '#353941', '#26282B',  '#FFF', '#FFF', '#BFCEF0'], // WIP Dark
     ];
 
-    static currentIndex = Math.floor(Math.random() * this.themes.length);
+    // TODO: fix some inconsistencies with font color. Use matcha until then
+    // static currentIndex = Math.floor(Math.random() * this.themes.length);
+    static currentIndex = 3;
     static current = this.themes[this.currentIndex];
 }
