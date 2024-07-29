@@ -1,0 +1,8 @@
+slot[name=content] {
+    display: none;
+}
+
+.grid-container {
+    display: grid;
+    text-align: center;
+}

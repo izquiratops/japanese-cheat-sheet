@@ -5,8 +5,8 @@ import { KanjiAnki } from './kanji-anki';
 import { PoliteVerbs } from './polite-verbs';
 import { Toc } from './toc';
 
-import { TableWithExamples } from '../components/table-with-examples';
-import { ThreeColumnGrid } from '../components/three-column-grid';
+import { SwitchableTable } from '../components/switchable-table';
+import { CustomTable } from '../components/custom-table';
 
 // Views
 customElements.define('site-body', Body);
@@ -17,5 +17,5 @@ customElements.define('site-polite-verbs', PoliteVerbs);
 customElements.define('site-toc', Toc);
 
 // Components
-customElements.define("table-with-examples", TableWithExamples);
-customElements.define("three-column-grid", ThreeColumnGrid);
+customElements.define("switchable-table", SwitchableTable);
+customElements.define("custom-table", CustomTable);

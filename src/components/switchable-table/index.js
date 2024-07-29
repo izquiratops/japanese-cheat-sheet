@@ -1,7 +1,7 @@
 import indexHtml from './index.html'
 import styleCss from './style.css'
 
-export class TableWithExamples extends HTMLElement {
+export class SwitchableTable extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
@@ -14,11 +14,13 @@ export class TableWithExamples extends HTMLElement {
     stylesheet.replaceSync(styleCss);
     this.shadowRoot.adoptedStyleSheets.push(stylesheet);
 
-    const input = this.shadowRoot.querySelector('input[type="checkbox"]')
-    input.addEventListener('change', this.toggleColumn.bind(this));
+    this.shadowRoot
+      .querySelector('input[type="checkbox"]')
+      .addEventListener('change', this.toggleColumn.bind(this));
     
-    const slot = this.shadowRoot.querySelector('slot[name=content]');
-    slot.addEventListener('slotchange', this.updateSlottedElements.bind(this));
+    this.shadowRoot
+      .querySelector('slot[name=content]')
+      .addEventListener('slotchange', this.updateSlottedElements.bind(this));
   }
 
   updateSlottedElements() {
