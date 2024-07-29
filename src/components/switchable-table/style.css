@@ -4,11 +4,26 @@ header {
     align-items: center;
 }
 
-::slotted(span[slot="content"]) {
+slot[name=content], .hidden {
+    display: none;
+}
+
+.grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
     background: var(--theme-color-2);
     border: 1px solid var(--theme-color-1);
     border-radius: var(--border-radius);
+}
+
+.grid__header {
+    color: var(--contrast-font-color);
+    background: var(--theme-color-1);
+    font-weight: bold;
+}
+
+.grid__header, .grid__item {
+    padding-inline: var(--spacing-small);
+    padding-block: var(--spacing-extra-small);
 }

@@ -157,18 +157,3 @@ site-body {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     column-gap: var(--spacing-medium);
 }
-
-/* ~~~ Shared ~~~ */
-
-/* Alternative style for table headers */
-:where(.grid__header) {
-    color: var(--contrast-font-color);
-    background: var(--theme-color-1);
-    font-weight: bold;
-}
-
-/* Space for every grid cell */
-:where(.grid__header, .grid__item) {
-    padding-inline: var(--spacing-small);
-    padding-block: var(--spacing-extra-small);
-}

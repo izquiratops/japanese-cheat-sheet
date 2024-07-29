@@ -15,24 +15,43 @@ export class SwitchableTable extends HTMLElement {
     this.shadowRoot.adoptedStyleSheets.push(stylesheet);
 
     this.shadowRoot
-      .querySelector('input[type="checkbox"]')
-      .addEventListener('change', this.toggleColumn.bind(this));
-    
-    this.shadowRoot
       .querySelector('slot[name=content]')
       .addEventListener('slotchange', this.updateSlottedElements.bind(this));
+
+    this.shadowRoot
+      .querySelector('input[type="checkbox"]')
+      .addEventListener('change', this.toggleColumn.bind(this));
   }
 
   updateSlottedElements() {
+    const gridContainer = this.shadowRoot.querySelector('.grid-container');
+    const slottedElements = this.shadowRoot
+      .querySelector('slot[name=content]')
+      .assignedElements();
+
+    // Clear existing content
+    gridContainer.innerHTML = '';
+
+    // Add slotted elements to the grid
+    Array.from(slottedElements[0].children).forEach(child => {
+      gridContainer.appendChild(child.cloneNode(true));
+    });
+
+    // Save grid children reference to switch columns later
+    this.gridChildren = Array.from(gridContainer.children);
+
     // Set column-b hidden by default
-    this.querySelectorAll('.column-b').forEach(elem => elem.classList.toggle('hidden', true))
-    this.slottedElements = this.querySelectorAll('.grid__item, .grid__header');
+    this.gridChildren.forEach(elem => {
+      if (elem.classList.contains('column-b')) {
+        elem.classList.add('hidden');
+      }
+    });
   }
 
   toggleColumn(event) {
     const isChecked = event.target.checked;
 
-    this.slottedElements.forEach(elem => {
+    this.gridChildren.forEach(elem => {
       if (elem.classList.contains('column-a')) {
         elem.classList.toggle('hidden', isChecked);
       } else if (elem.classList.contains('column-b')) {

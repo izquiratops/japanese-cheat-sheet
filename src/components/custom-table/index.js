@@ -20,10 +20,10 @@ export class CustomTable extends HTMLElement {
 
     this.shadowRoot
       .querySelector('slot[name=content]')
-      .addEventListener('slotchange', this.updateGrid.bind(this));
+      .addEventListener('slotchange', this.updateSlottedElements.bind(this));
   }
 
-  updateGrid() {
+  updateSlottedElements() {
     const gridContainer = this.shadowRoot.querySelector('.grid-container');
     const slottedElements = this.shadowRoot
       .querySelector('slot[name=content]')
