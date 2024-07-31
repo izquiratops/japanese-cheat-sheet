@@ -2,21 +2,16 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"type": "go",
-			"label": "Build package",
-			"command": "build",
-			"options": {
-            	"cwd": "${workspaceFolder}/devtool-src",
-			},
-			"args": [
-				"-o",
-				"../devtool",
-			],
-			"problemMatcher": [
-				"$go"
-			],
-			"group": "build",
-			"detail": "go build"
-		}
+            "label": "Run bundler-tools",
+            "type": "shell",
+            "command": "bundler-tools",
+            "args": [
+				"--src", "${workspaceFolder}/src/index.html",
+				"--dist", "${workspaceFolder}/dist",
+                "minify", "true"
+            ],
+            "group": "build",
+            "detail": "Run bundler-tools with arguments"
+        }
 	]
 }

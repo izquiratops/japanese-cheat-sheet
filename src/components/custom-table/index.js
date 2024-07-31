@@ -1,6 +1,21 @@
 import indexHtml from './index.html'
 import styleCss from './style.css'
 
+/**
+ * Custom table component. Takes a `columns` attribute to define the number of columns.
+ * The `grid-header` and `grid-item` classes are used to define the header and content cells.
+ * ```
+ * <custom-table columns="3">
+ *  <h1 slot="header">Header 1</h1>
+ *  <span slot="content">
+ *   <div class="grid-header">Header 1</div>
+ *   <div class="grid-header">Header 2</div>
+ *   <div class="grid-item">Item 1</div>
+ *   <div class="grid-item">Item 2</div>
+ *  </span>
+ * </custom-table>
+ * ```
+ */
 export class CustomTable extends HTMLElement {
   constructor() {
     super();
@@ -23,6 +38,7 @@ export class CustomTable extends HTMLElement {
       .addEventListener('slotchange', this.updateSlottedElements.bind(this));
   }
 
+  /** @this CustomTable */
   updateSlottedElements() {
     const gridContainer = this.shadowRoot.querySelector('.grid-container');
     const slottedElements = this.shadowRoot

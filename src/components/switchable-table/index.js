@@ -1,6 +1,22 @@
 import indexHtml from './index.html'
 import styleCss from './style.css'
 
+/**
+ * Table with a switch to toggle columns visibility.
+ * The `column-a` and `column-b` classes are used to define the columns that can be toggled.
+ * The `grid-header` and `grid-item` classes are used to define the header and content cells.
+ * ```
+ * <switchable-table>
+ *  <h1 slot="header">Header 1</h1>
+ *  <span slot="content">
+ *    <div class="grid-header column-a">Header 1</div>
+ *    <div class="grid-header column-b">Header 2</div>
+ *    <div class="grid-item column-a">Item 1</div>
+ *    <div class="grid-item column-b">Item 2</div>
+ *  </span>
+ * </switchable-table>
+ * ```
+ */
 export class SwitchableTable extends HTMLElement {
   constructor() {
     super();
@@ -23,6 +39,10 @@ export class SwitchableTable extends HTMLElement {
       .addEventListener('change', this.toggleColumn.bind(this));
   }
 
+  /** 
+   * Move slotted elements from the content slot to the grid container.
+   * @this SwitchableTable
+   */
   updateSlottedElements() {
     const gridContainer = this.shadowRoot.querySelector('.grid-container');
     const slottedElements = this.shadowRoot
@@ -48,6 +68,11 @@ export class SwitchableTable extends HTMLElement {
     });
   }
 
+  /**
+   * Switch columns visibility based on checkbox state
+   * @this SwitchableTable
+   * @param {Event} event Checkbox change event
+   */
   toggleColumn(event) {
     const isChecked = event.target.checked;
 
