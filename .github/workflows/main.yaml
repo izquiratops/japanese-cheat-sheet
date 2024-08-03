@@ -20,11 +20,8 @@ jobs:
       - name: Install bundler-tools
         run: go install github.com/izquiratops/bundler-tools@latest
 
-      - name: Ls Go path
-        run: ls -la /home/runner/go/bin
-
       - name: Build artifact
-        run: bundle-tools build
+        run: bundler-tools build
 
   deploy:
     needs: build
