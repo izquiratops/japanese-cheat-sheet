@@ -1,0 +1,65 @@
+{
+    "DarkRed": {
+      "--theme-color-1": "#874356",
+      "--theme-color-2": "#F68989",
+      "--theme-color-3": "#C65D7B",
+      "--theme-color-4": "#F6E7D8",
+      "--font-color": "#000",
+      "--contrast-font-color": "#FFF",
+      "--small-font-color": "#444"
+    },
+    "Fucsia": {
+      "--theme-color-1": "#7469B6",
+      "--theme-color-2": "#AD88C6",
+      "--theme-color-3": "#E8C2DC",
+      "--theme-color-4": "#FFE6E6",
+      "--font-color": "#000",
+      "--contrast-font-color": "#FFF",
+      "--small-font-color": "#444"
+    },
+    "SuaveGreen": {
+      "--theme-color-1": "#55AD9B",
+      "--theme-color-2": "#95D2B3",
+      "--theme-color-3": "#D8EFD3",
+      "--theme-color-4": "#F1F8E8",
+      "--font-color": "#000",
+      "--contrast-font-color": "#000",
+      "--small-font-color": "#444"
+    },
+    "Matcha": {
+      "--theme-color-1": "#99BC85",
+      "--theme-color-2": "#BFD8AF",
+      "--theme-color-3": "#D4E7C5",
+      "--theme-color-4": "#E1F0DA",
+      "--font-color": "#000",
+      "--contrast-font-color": "#000",
+      "--small-font-color": "#444"
+    },
+    "100%OrangeJuice": {
+      "--theme-color-1": "#FF7D29",
+      "--theme-color-2": "#FFBF78",
+      "--theme-color-3": "#FFEEA9",
+      "--theme-color-4": "#FEFFD2",
+      "--font-color": "#000",
+      "--contrast-font-color": "#FFF",
+      "--small-font-color": "#444"
+    },
+    "いちご🍓": {
+      "--theme-color-1": "#FF9494",
+      "--theme-color-2": "#FFD1D1",
+      "--theme-color-3": "#FFE3E1",
+      "--theme-color-4": "#FFF5E4",
+      "--font-color": "#000",
+      "--contrast-font-color": "#000",
+      "--small-font-color": "#444"
+    },
+    "WIP Dark": {
+      "--theme-color-1": "#5F85DB",
+      "--theme-color-2": "#353941",
+      "--theme-color-3": "#353941",
+      "--theme-color-4": "#26282B",
+      "--font-color": "#FFF",
+      "--contrast-font-color": "#FFF",
+      "--small-font-color": "#BFCEF0"
+    }
+  }
