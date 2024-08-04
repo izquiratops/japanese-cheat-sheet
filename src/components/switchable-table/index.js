@@ -1,10 +1,11 @@
 import indexHtml from './index.html'
 import styleCss from './style.css'
-
+import tooltipCss from '../../tooltip.css'
 /**
  * Table with a switch to toggle columns visibility.
  * The `column-a` and `column-b` classes are used to define the columns that can be toggled.
  * The `grid-header` and `grid-item` classes are used to define the header and content cells.
+ * @example
  * ```
  * <switchable-table>
  *  <h1 slot="header">Header 1</h1>
@@ -26,9 +27,11 @@ export class SwitchableTable extends HTMLElement {
   connectedCallback() {
     this.shadowRoot.innerHTML = indexHtml;
 
-    const stylesheet = new CSSStyleSheet();
-    stylesheet.replaceSync(styleCss);
-    this.shadowRoot.adoptedStyleSheets.push(stylesheet);
+    [styleCss, tooltipCss].forEach(css => {
+      const stylesheet = new CSSStyleSheet();
+      stylesheet.replaceSync(css);
+      this.shadowRoot.adoptedStyleSheets.push(stylesheet);
+    });
 
     this.shadowRoot
       .querySelector('slot[name=content]')
@@ -41,7 +44,6 @@ export class SwitchableTable extends HTMLElement {
 
   /** 
    * Move slotted elements from the content slot to the grid container.
-   * @this SwitchableTable
    */
   updateSlottedElements() {
     const gridContainer = this.shadowRoot.querySelector('.grid-container');
@@ -70,7 +72,6 @@ export class SwitchableTable extends HTMLElement {
 
   /**
    * Switch columns visibility based on checkbox state
-   * @this SwitchableTable
    * @param {Event} event Checkbox change event
    */
   toggleColumn(event) {

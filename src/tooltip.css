@@ -1,0 +1,18 @@
+[data-tooltip] {
+    cursor: help;
+
+    div:first-child:after {
+        content: '*';
+    }
+}
+
+[data-tooltip]:hover::after {
+    display: block;
+    position: absolute;
+    content: attr(data-tooltip);
+    margin-inline: var(--spacing-small);
+    background: var(--theme-color-4);
+    border: 1px solid var(--theme-color-1);
+    padding: var(--spacing-small);
+    border-radius: var(--border-radius);
+}

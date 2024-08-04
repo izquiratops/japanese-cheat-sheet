@@ -4,6 +4,7 @@ import styleCss from './style.css'
 /**
  * Custom table component. Takes a `columns` attribute to define the number of columns.
  * The `grid-header` and `grid-item` classes are used to define the header and content cells.
+ * @example
  * ```
  * <custom-table columns="3">
  *  <h1 slot="header">Header 1</h1>
@@ -38,7 +39,9 @@ export class CustomTable extends HTMLElement {
       .addEventListener('slotchange', this.updateSlottedElements.bind(this));
   }
 
-  /** @this CustomTable */
+  /**
+   * Move slotted elements from the content slot to the grid container.
+   */
   updateSlottedElements() {
     const gridContainer = this.shadowRoot.querySelector('.grid-container');
     const slottedElements = this.shadowRoot
